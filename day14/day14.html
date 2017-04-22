@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style>
+		
+		div{
+			width: 200px;
+			height: 200px;
+			background: red;
+			line-height: 200px;
+			text-align: center;
+			border-radius: 50%;
+			
+		}
+	</style>
+	<body>
+		<div onclick="alert('你居然真的点')">点我点我！</div>
+		<div id="box"></div>
+		<button id="type">再见</button>
+	</body>
+	<script src="day14.js"></script>
+	<script>
+		var xiaohei="dog";
+		console.log(xiaohei); //这两行就是标准的声明变量；
+		var a;
+		
+		console.log(a);//这个就会报错，因为没有声明这个a；  并且不会继续运行下面的代码；  所有代码均为英文状态下的符号；
+						//如果给下面一行的a设置为var a=5就会变成undefind;
+		 a=5;
+		console.log(a);
+		var b=a;
+		console.log(b);
+		
+		const PI="大家好";
+		console.log(PI);
+		console.log((((123+(45*78))/(34+543))-9*(324-34)));
+		//Infinity:表示无穷大；  NaN 表示不存在这个数字;	
+		//+存在的时候 无条件 转化为字符串（除了两个Number的情况），存在><的时候就会自动转化为number 
+//		当一方存在字符串的时候 就显示为NaN，（NaN是最小的number）。（><优先级比+-低）；
+//		括号>乘除>加减>大于小于号；
+//
+		document.getElementById("box").style.width="200px";
+		document.getElementById("box").style.height="200px";
+		document.getElementById("box").style.backgroundColor="red";
+		document.getElementById("type").style.height="100px";
+		var Nice = document.getElementById("type");
+		Nice.style.borderStyle="0";
+		Nice.style.outline="none";
+		
+	</script>
+</html>

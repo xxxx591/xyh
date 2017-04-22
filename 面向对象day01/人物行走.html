@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style>
+		#box{
+			width: 64px;height: 128px;background:url(images/run.png)no-repeat ;
+			background-position: 0px -256px;position: absolute;
+		}
+	</style>
+	<body>
+		<div id="box">
+			
+		</div>
+	</body>
+	<script>
+		var num=0;
+		var num1=0
+		var box=document.getElementById("box");
+		setInterval(function  () {
+			num+=2;
+			num1++;
+			if (num1>7) {
+				num1=0
+			}
+			if (num==1000) {
+				num=0
+			}
+			box.style.left=num+"px" ;
+			box.style.backgroundPosition=-num1*64+"px -256px";
+		},50)
+		
+	</script>
+</html>

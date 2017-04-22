@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style>
+		div{margin: 0 auto;width: 200px;}
+		button{
+			width: 23px;height: 21px;
+		}
+	</style>
+	<body>
+		<div onclick="calc()">
+		<button>1</button>
+		<button>2</button>
+		<button>3</button><br />
+		<button>4</button>
+		<button>5</button>
+		<button>6</button><br />
+		<button>7</button>
+		<button>8</button>
+		<button>9</button><br />
+		<button>0</button>
+		<button>+</button>
+		<button>-</button><br />
+		<button>*</button>
+		<button>/</button>
+		<button>C</button>
+		<button>=</button><br />
+		<textarea id="txt"></textarea>
+		</div>
+	</body>
+	<script>
+		function calc () {
+			var e=event||arguments[0];
+			var src =e.srcElement||target;
+			var txt=document.getElementById("txt");
+			if (src.nodeName=="BUTTON") {
+				switch (src.innerHTML){
+					case "C"://清空文本元素
+					txt.innerHTML=""
+						break;
+					case "="://eval()将txt内容放入eval()函数中 将执行结果返回至innerHTML
+					txt.innerHTML=eval(txt.innerHTML)
+						break;
+					
+					default://将src内容追加到TXT中
+					txt.innerHTML+=src.innerHTML
+						break;
+				}
+			}
+		}
+	</script>
+</html>

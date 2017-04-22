@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>就第一次练习？</title>
+  <style >
+	input.a11 { 
+	position:absolute;
+	left:350px;
+			}
+	input.a22 {
+	position:absolute;
+	left:400px;
+			}
+	input.a33 {
+	position:absolute;
+	left:476px;
+			}
+  </style>
+</head>
+<body   bgcolor="#42f63d">
+<div>
+	<h2>今日新闻</h2>
+	<ol type="1">
+		<li>3岁男童坠楼身亡</li>
+			<ul type="square">
+				<li>1</li>
+				<li>2</li>
+				<li>3</li>
+				<li>4</li>
+			</ul>
+		<li>民法总则草案四审</li>
+			<ul>
+				<li>1</li>
+				<li>2</li>
+				<li>3</li>
+				<li>4</li>
+			</ul>
+		<li>55岁庾澄庆当爸</li>
+			<ul type="circle">
+				<li>1</li>
+				<li>2</li>
+				<li>3</li>
+				<li>4</li>
+			</ul>
+		<li>女生爱美地图走红</li>
+	</ol>
+</div>
+	<table width="400px" height="300px"  border="1" bgcolor="#135672" cellpadding="0" cellspacing="0">
+		<caption>这是座位表</caption>
+		<thead>
+			<tr align="center" >
+				<td colspan="4">1</td>
+				
+			</tr>
+		</thead>
+		<tbody align="center" valign="middle">
+			<tr>
+				<td rowspan="2">5</td>
+				<td>6</td>
+				<td>7</td>
+				<td>8</td>
+			</tr>
+			<tr>
+				
+				<td>10</td>
+				<td>11</td>
+				<td>12</td>
+			</tr>
+		</tbody >
+		<tfoot  align="center" >
+			<tr>
+				<td colspan="4">13</td>
+				
+			</tr>
+		</tfoot>
+	</table>
+	<input placeholder="请输入账号" class="a11"/><br/><input placeholder="请输入密码" type="password" required="required" class="a11"/><br/>
+	<input type="submit" class="a11" value="登录" /> <input type="reset" class="a22" value="重置数据"/>
+	<input type="button" class="a33" value="注册(未实现)"/>
+	<br/>
+	<br/>
+	<fieldset>
+		<legend>自我介绍</legend	>
+		<form align="center">
+			姓名<input/> 年龄<input/> 性别<input type="radio" name="sex" checked/>男<input type="radio" name="sex"/>女
+			<br/>
+			兴趣爱好<input type="checkbox" checked/>玩蛇<input type ="checkbox"/>
+			看书<input type="checkbox"/>玩游戏<input type="checkbox"/><br/>
+			<textarea cols="50" rows="5"  placeholder="请开始你的表演......"></textarea><br/>来自
+			<select >
+				<option>北京</option>
+				<option  selected="selected">湖南</option>
+				<option>湖北</option>
+				<option>河南</option>
+				<option>河北</option>
+				<option>浙江</option>
+			</select>省
+			<select>
+				<option >长沙</option>
+				<option>邵阳</option>
+				<option>宁乡</option>
+				<option>别看了，除了湖南哪里都没有</option>
+			</select>市
+			<nav>
+				<a href="Tel:18573978397" >联系方式</a>
+				<a href="mailto:250173319@qq.com">电子邮件</a>
+				<a href="123.zip">打包下载</a>
+			</nav>
+	</fieldset>
+
+	</form>
+</body>
+</html>

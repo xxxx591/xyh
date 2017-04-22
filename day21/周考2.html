@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style>
+		*{
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+		div{
+			width: 500px;height: 300px;overflow: hidden;position: relative;
+		}
+		.navlist{
+			width: 2500px;height: 300px;
+		}
+		.navlist li {
+			list-style: none;width: 500px;height: 300px;float: left;
+		}
+		.title{
+			float: left;position: absolute; bottom: 30px;left: 240px;
+			height: 30px;
+		}
+		.title li{
+			width: 30px;height: 30px;border-radius: 50%;background: rgba(255,255,255,0.6);float: left;margin: 0 15px;text-align: center;line-height: 30px;
+		}
+		.title>.now{
+			background: #fff;
+		}
+		i,em{
+			width: 40px;
+			height: 40px;
+			background: black;
+			border-radius: 50%;
+		}
+		i{
+			position: absolute;
+			top: 120px;
+			left: 30px;
+		}
+		em{
+			position: absolute;
+			top: 120px;
+			right: 30px;
+		}
+	</style>
+	<body>
+		<div id="box">
+			<ul class="navlist">
+				<li style="background: wheat;"></li>
+				<li style="background: red;"></li>
+				<li style="background: teal;"></li>
+				<li style="background: cyan;"></li>
+				<li style="background: wheat;"></li>
+			</ul>
+			<ul class="title">
+				<li class="now">1</li>
+				<li>2</li>
+				<li>3</li>
+				<li>4</li>
+			</ul>
+			<i id="ibutton"></i>
+			<em id="ibutton1"></em>
+		</div>
+	</body>
+	<script src="轮播图-王云.js"></script>
+	<script>
+		var box=document.getElementById("box")
+		console.log(box)
+		var ibutton=document.getElementById("ibutton")
+		var ibutton1=document.getElementById("ibutton1")
+		var oul = document.getElementsByClassName("navlist")[0]
+		var title = document.getElementsByClassName("title")[0].children
+		var numlist=0;
+		var timer= setInterval(fun,2000)
+		function fun() {
+			if (numlist==4) {
+				numlist=0
+				oul.style.marginLeft="0"
+			}
+			numlist++;
+			startMove(oul,{"margin-left":numlist*-500})
+			
+			for (var i =0;i<title.length;i++) {
+				title[i].className=""
+			}
+			title[numlist>=4?0:numlist].className="now"
+		}
+		for (var j =0;j<title.length;j++) {
+			
+			title[j].index=j;
+			title[j].onclick=function() {
+				clearInterval(timer	)
+				startMove(oul,{"margin-left":this.index*-500})
+				for (var k =0;k<title.length;k++) {
+					title[k].className=""
+				}
+				this.className="now"
+				numlist=this.index
+				timer=setInterval(fun,2000)
+			}
+		}
+		oul.onmouseover=function  () {
+			clearInterval(timer	)
+		}
+		oul.onmouseout=function() {
+			timer=setInterval(fun,2000)
+		}
+		
+	</script>
+</html>

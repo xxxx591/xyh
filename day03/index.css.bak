@@ -1,0 +1,13 @@
+body{width:600px;height:400px;}
+div{background-color:red;}
+.box{color:blue;}
+div ul li{color:yellow;}
+div>li{color:green;}
+#list{color:#927298;}
+a:link{color:red;}
+a:visited{color:black;}
+a:hover{background-color:#37dea8;}
+input:focus{background-color:#2738dc;}
+a:active{color:black;}
+a,ul,li{font-size:40px;}
+#button{color:yellow}

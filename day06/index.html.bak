@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+<link rel="stylesheet"  type="text/css"href="index.css"/>
+  <title>day05</title>
+ </head>
+ <body>
+	<ul>
+		<li class="box">
+			<a href="#" target="black"  class="span">卖家中心</a>
+			<ul class="buy">
+				<li>免费开店</li>
+				<li>已卖出的宝贝</li>
+				<li>出售中的宝贝</li>
+				<li>卖家服务中心</li>
+				<li>卖家培训中心</li>
+				<li>体验中心</li>
+			</ul>
+		</li>
+	</ul>&nbsp;
+	<ul>
+		<li class="box">
+			<a href="#" target="black"  class="span" >卖家中心</a>
+			<ul class="buy">
+				<li>免费开店</li>
+				<li>已卖出的宝贝</li>
+				<li>出售中的宝贝</li>
+				<li>卖家服务中心</li>
+				<li>卖家培训中心</li>
+				<li>体验中心</li>
+			</ul>
+		</li>
+	</ul>
+ </body>
+</html>
+
+
+
+<ul class="game  plan2">
+			<li>DNF　梦幻西游　魔兽　LOL　坦克世界　剑网3　魔域　DOTA2</li>
+			<li>街头篮球　CF　天龙八部　大话西游2　三国争霸　YY　劲舞团</li>
+			<li>倩女幽魂　天下3　反恐精英　冒险岛　问道　逆战　大唐无双</li>
+			<li>九阴真经　龙之谷　热血江湖　剑灵</li>
+		</ul>

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	<style>
+		#demo{
+			width: 200px;
+			height: 200px;
+			background-color: pink;
+		}
+	</style>
+	<body>
+		<!--<div id="demo"></div>
+		<button id="btn">改变宽度</button>
+		<button id="btn1">改变高度</button>
+		<button id="btn2">改变背景色</button>-->
+	</body>
+	<script type="text/javascript" src="day15.js" ></script>
+	<script>
+//		var a = 31;
+//		a=a.toString();
+//		document.write(typeof a.toString() +"</br>");
+//		var age=parseFloat(window.prompt("输入宽度"));
+//		var age=age+100;
+//		//怎么说 我怎么这么蠢
+//		//write后面不用跟prompt；
+//		document.write("现在的宽度："+age+"</br>");
+//		var xyh=parseInt(prompt("输入一个四位数"));
+//		var qian=parseInt(xyh/1000);
+//		var bai=parseInt(xyh/100)%10;
+//		var shi=parseInt(xyh/10)-qian*100-bai*10;
+//		var ge=parseInt(xyh%10);
+//		    document.write("千位数："+qian+"百位数："+bai+"十位数："+shi+"个位数："+ge+("</br>"));
+////		document.write("还有"+parseInt((xyh)/(24)/(60)/(60))+"天");
+
+		//作业2：随便输入一个4位数  分别打印每位数
+//		var n=4;
+//		var b= --n + n++ + ++n + n-- + --n ;
+//				3	  3     5     5     3
+////		document.write(b);
+//		document.write(Math.pow(3,4));
+//		document.write(Math.sqrt(9));
+//		document.write(1+("</br>"));
+//		document.write(isNaN(2));
+//		var xyh=parseInt(prompt("你猜这个是数字吗？"));
+//		document.write(isNaN(xyh));
+		//++n是先自增再运算，n++是先运算再自增；
+		//“！”可以是判断结果颠倒  适用于isNaN;  判断是否为NaN；
+//		var a=6;
+//		var r=prompt("猜我输入的是什么");
+//		var x= a==r;
+//		document.write("猜对了吗？"+x);
+//		var num=parseInt(prompt("请输入数字"));
+//		var x=num%2==1;
+//		var y=num%2==0;
+//		document.write("是基数："+x+"是偶数："+y);
+//		var num=parseInt(prompt("请输入数字"));
+//			num>=500&&(num=num*0.8);
+////			num<=500||(num=num*0.8);
+//		document.write("实际多少钱："+parseInt(num));
+//		var height=prompt("身高");
+//		var tizhong=prompt("体重");
+//		var x=tizhong/(height*2);
+//		x<20?alert("偏瘦"):x>25?alert("偏重"):alert("合格");
+
+		// 第一个作业；
+//		var x = prompt("数字");
+//		if(x%5==0&&x%6==0){
+//			alert("这个数字能被5和6整除")}
+//		else if(x/6>0&&x%5==0){
+//			alert("这个数字能被5整除,不能被6整除")
+//		}
+//		else if(x%5>0&&x/6==0)	{
+//			alert("这个数字能被6整除，不能被5整除")
+//		}
+//		else if(x%5>0&&x/6>0){
+//			alert("这个数字不能被6整除，不能被5整除")
+//		}
+		//第二个作业
+//		var x = prompt("数字");
+//		var y = prompt("数字2");
+//		
+//		if (x%2==0&&y%2==0) {
+//			alert("这两个数基偶性相同")
+//		} else if(x%2>0&&y%2>0){
+//			alert("这两个数基偶性相同")
+//		}
+//		 else if(x%2==0&&y%2>0){
+//		 	alert("这两个数基偶性不同")
+//		 }
+//		 else if(x%2>0&&y%2==0){
+//		 	alert("这两个数基偶性不同")
+//		 }
+		//第三个作业
+//		var x = prompt("输入一个年份");
+//		if (x%100==0&&x%400==0) {
+//			alert("这是闰年");
+//		} else if (x%100>0&&x%4==0) {
+//			alert("这是闰年");
+//		}
+//		  else if (x%100==0&&x%400>0){
+//		  	alert("这不是闰年");
+//		}
+//		  else if (x%100>0&&x%4>0){
+//		  	alert("这不是闰年");
+//		}
+//		（a&&b）||（a&&c）===a&&(b||c)
+
+//		第四个作业：
+//		var year = prompt("工作年份");
+//		var money = prompt("月薪");
+//		if( year>=0&&money >=8000){
+//			document.write("年终奖："+money*1.2)
+//		}
+//		else if(year>=0&&money<8000){
+//			document.write("年终奖："+money*1)
+//		}
+//		else if(year>=1&&money>=10000){
+//			document.write("年终奖："+money*1.7)
+//		}
+//		else if(year>=1&&money<10000){
+//			document.write("年终奖："+money*1.5)
+//		}
+//		else if(year>=2&&money>=12000){
+//			document.write("年终奖："+money*3.2)
+//		}
+//		else {
+//			document.write("年终奖："+money*3)
+//		}
+//		事件三要素: 事件源,事件,事件处理程序;
+//		格式为  事件源.事件=funtion() {};
+		
+//		var x=prompt("输入你的星座")
+//		if (x=="巨蟹座") {
+//			alert("你是最棒的")
+//		} else 
+//		{
+//			if (x=="天蝎座") {
+//				
+//		} else{
+//			alert("你也是最棒的")
+//		}
+//		var a = parseInt(prompt("输入月份"));
+//		switch ("这个一般是赋值的参数"){
+//			case value==>这个是一个一直的常数:
+//			想进行的操作
+//				break;(跳出switch操作)
+//			default:
+//				break;
+//		}
+//		switch (a){
+//			case 1:
+//			alert("31天")
+//				break;
+//			default:
+//			alert("不存在的")
+//				break;
+//		}
+//		这是求1+2+3+...+n的和
+//		var s=1;
+//		var a=0;
+//		var k = prompt("请输入一个数字")
+//		for (var b =1;b<=k;b++) {
+//			s=a+b;
+//		}
+//			document.write(a);
+//			document.write(b)
+//		var i=1
+//		while (i<11){
+//			console.log(i);
+//			i++
+//		}
+//		for (var i =0;i<10;i++) {
+//			if (i==3) {
+//				continue
+//			}
+//			console.log(i)
+//		}
+//		for (var i =0 ;i<6;i++) {
+//			for (var j =0;j<6;j++) {
+//				if (i==3||j==4) {
+//					continue
+//				}
+//				console.log(i,j)
+//			}
+//		}
+		
+//		var demo = document.getElementById("demo");
+//		var btn = document.getElementById("btn");
+//		var btn1 = document.getElementById("btn1");
+//		var btn2 = document.getElementById("btn2");
+//		btn.onclick=function(){
+//			demo.style.width="400px";
+//		}
+//		btn1.onclick = function(){
+//			demo.style.height="400px";
+//		}
+//		btn2.onclick = function(){
+//			demo.style.backgroundColor="red";	
+//		}
+//      第三题：求分数的和
+//		var a = prompt("请输入一个数字")
+//		if (a==0) {
+//			alert("分母不能为0")
+//		}
+//		var b=0;
+//		for ( var i=1;i<=a;i++) {
+//			b=b+((i+1)/i)
+//		}
+//		document.write(b);
+//		第b八题：
+//		var num=0;
+//		var j =prompt("请输入一个数字")
+//		for (var i =1;i<=j;i++) {
+//				if (j%i==0) {
+//					num++
+//				}
+//		}
+//		if(num == 2){ 
+//			alert("这是一个质数"); 
+//		}else{ 
+//			alert("这不是一个质数"); 
+//		}
+//		第九题：
+//		for (var i=1;i<10000;i++) {
+//			var num=0;
+//			for (var j=1;j<=i;j++) {
+//				if (i%j==0) {
+//					num++
+//				}
+//			}
+//			if (num==2) {
+//				console.log(i)
+//			}
+//		}
+		//第十题；
+//		var a=0;
+//		var b=0;
+//		var c=0;
+//		for (a=0;a<=100;a++) {
+//			for (b=0;b<=100;b++) {
+//				for(c=0;c<=100;c++){
+//					if (a+b+c==100&&(3*a+2*b+c)==200) {
+//						document.write(a+"个苹果"+b+"个鸭梨"+c+"个桃子"+"</br>")
+//					}
+//				}
+//			}
+//		}
+		</script>
+</html>

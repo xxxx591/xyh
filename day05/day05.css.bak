@@ -1,0 +1,54 @@
+*{
+	margin:0;
+	padding:0;
+	}
+body{
+	width:400px;
+	margin:0 auto;
+	}
+.box1{
+	width:400px;
+	height:45px;
+	line-height:45px;
+	border:1px solid black;
+	}
+
+span{
+	font-size:20px;
+	line-height:20px;
+	
+	}
+
+input{
+	border:0;outline:none
+	} 
+
+p{
+	text-align:right;
+
+}
+img{
+	height:47px;
+	margin:-17px -25px;
+}
+button{
+	width:72px;
+	height:49px;
+	margin:-14px 4px;
+}
+#button1{
+	width:400px;
+	height:45px;
+	margin:0 0 ;
+	background:red;
+	font-size:29px;
+	color:white;
+	font-family:"shiguang"
+	}
+@font-face{
+	font-family:shiguang;
+	src:url(shiguangti.ttf);
+}
+a{
+	text-decoration:none;
+	}	

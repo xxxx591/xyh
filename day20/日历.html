@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style>
+	*{
+		padding: 0;
+		margin: 0;
+	}
+		div{
+			width: 300px;
+			height: 450px;
+			background: #abcdef;
+			text-align: center;
+				overflow: hidden;
+		}
+		#box li{
+			list-style: none;
+			float: left;
+			width: 60px;
+			height: 60px;
+			margin-top: 30px;
+			margin: 15px;
+			border: 1px solid pink;
+			line-height: 60px;
+			background:#424242;
+			color: #fff;
+		}
+		
+		#nav li{
+			width: 300px;
+			height: 80px;
+			background:#F1F1F1 ;
+		}
+		ul{
+			float: left;
+		}
+	</style>
+	<body>
+		<div>
+			<ul id="box">
+				<li>一月</li>
+				<li>二月</li>
+				<li>三月</li>
+				<li>四月</li>
+				<li>五月</li>
+				<li>六月</li>
+				<li>七月</li>
+				<li>八月</li>
+				<li>九月</li>
+				<li>十月</li>
+				<li>十一月</li>
+				<li>十二月</li>
+			</ul>
+			<ul id="nav">
+				<li>一月</li>
+				<li>二月</li>
+				<li>三月</li>
+				<li>四月</li>
+				<li>五月</li>
+				<li>六月</li>
+				<li>七月</li>
+				<li>八月</li>
+				<li>九月</li>
+				<li>十月</li>
+				<li>十一月</li>
+				<li>十二月</li>
+			</ul>
+		</div>
+	</body>
+	<script>
+			var boxlist=document.getElementById("box").getElementsByTagName("li");
+			var navlist=document.getElementById("nav").getElementsByTagName("li");
+			for (var i =0;i<navlist.length;i++) {
+				navlist[i].index=i;
+			}
+			for (var i = 0;i<boxlist.length;i++) {
+				boxlist[i].index=i;
+				boxlist[i].onclick=function () {
+					for (var j =0 ;j<boxlist.length;j++) {
+						if (this.index==navlist[j].index) {
+							boxlist[j].style.background="#fff"
+							boxlist[j].style.color="#EA5086"
+							navlist[j].style.display="block"
+						} else{
+							boxlist[j].style.background="#424242"
+							navlist[j].style.display="none"
+							boxlist[j].style.color="#fff"
+						}
+					}
+				}
+			}
+		 
+	</script>
+</html>

@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="day06.css"/>
+<title>day05_1</title>
+</head>
+<body>
+	<div class="box">
+		<ul style="width:120px;">
+			<li><a href="#" class="word">游戏/动漫/影视</a></li>
+		
+			<ul class="game  plan1">
+				<li>DNF　梦幻西游　魔兽　LOL　坦克世界　剑网3　魔域　DOTA2</li>
+				<li>街头篮球　CF　天龙八部　大话西游2　三国争霸　YY　劲舞团</li>
+				<li>倩女幽魂　天下3　反恐精英　冒险岛　问道　逆战　大唐无双</li>
+				<li>九阴真经　龙之谷　热血江湖　剑灵</li>
+			</ul>
+		</ul>
+	</div>  
+	<div class="box1 ">
+		<ul style="width:120px;">
+			<li><a href="#" class="word">美食/生鲜/零食</a></li>
+		</ul>
+		<ul class="game  plan2 game1">
+			<li>DNF　梦幻西游　魔兽　LOL　坦克世界　剑网3　魔域　DOTA2</li>
+			<li>街头篮球　CF　天龙八部　大话西游2　三国争霸　YY　劲舞团</li>
+			<li>倩女幽魂　天下3　反恐精英　冒险岛　问道　逆战　大唐无双</li>
+			<li>九阴真经　龙之谷　热血江湖　剑灵</li>
+		</ul>
+	</div>  
+</body>
+</html>

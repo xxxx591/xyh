@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script>
+		var arr1 = new Array(123,41,231,3,1);
+		var arr2 = new Array(123,213,1,2,31,222)
+//		arr1.sum = function  () {
+//			var result=0;
+//			for (var i = 0; i<arr1.length;i++) {
+//				result += arr1[i];
+//			}
+//			return result;
+//		}
+//		console.log(arr1.sum());
+//		console.log(arr2.sum());
+		//现在就无法打印出arr2的数值  因为上面的功能只能针对arr1使用。
+		//这个时候就需要使用函数原型prototpye函数
+		
+		Array.prototype.sum=function  () {
+			var result=0;
+			for (var i = 0; i < this.length;i++) {
+				result += this[i];
+			}
+			return result;
+		}
+		console.log(arr1.sum());
+		console.log(arr2.sum());
+		
+	</script>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style>
+		div{
+			height: 27px;
+			width: 27px;
+			float: left;
+			background: url(img/bg_01.png)no-repeat;
+		}
+	</style>
+	<body>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<p id ="dajiah"></p>
+	</body>
+	<script>
+		var oImg= document.getElementsByTagName("div");
+		var arr=["差评","不推荐","一般","推荐","强烈推荐",]
+		console.log(oImg[1])
+		
+			for (var i=0;i<oImg.length;i++) {
+				oImg[i].index=i
+				console.log(oImg[i].index)
+				oImg[i].onmouseover=function () {
+					
+					for (var j=0;j<oImg.length;j++) {
+						
+						if (j<=this.index) {
+							oImg[j].style.background="url(img/bg_03.png)no-repeat"
+						} else{
+							oImg[j].style.background=""
+						}
+					}
+				}
+				oImg[i].onclick=function  () {
+					alert((this.index+1)+"分")
+					document.getElementById("dajiah").innerHTML=arr[this.index]
+				}
+			}
+	</script>
+</html>

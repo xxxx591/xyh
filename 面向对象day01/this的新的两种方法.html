@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script>
+		var obj ={
+			name:"谢沅航 ",
+			sex:"男",
+			haha:fun
+		}
+//		function fun () {
+//			console.log(this.name)
+//		}
+//		fun.apply(obj)
+//		fun.call(obj)
+		function fun (n) {
+			for (i=1 ; i<=n ; i++) {
+				console.log(this.name);
+			}
+		}
+		fun.apply(obj,[10]);
+		fun.call(obj,10);
+		//这个自定义this对象需要注意 第一个参数为对象，第二个参数为要传入的数值，apply需要加[]call不需要
+		
+		function CreatePerson (name,age,sex) {
+			this.name=name;
+			this.age=age;
+			this.sex=sex
+		}
+		var person =new CreatePerson("谢沅航",18,"男");
+		console.log(person)//这就是构造函数，不能使用return；可以创建一类这种函数
+		
+		
+		
+		
+		function createPerson (name,age,sex) {
+			var obj =new Object ()
+				obj.name=name;
+				obj.age=age;
+				obj.sex=sex;
+				return obj;
+		}
+		var person1= createPerson("谢沅航",19,"男");
+		console.log(person1) //工厂函数
+	</script>
+</html>

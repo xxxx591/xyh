@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div>
+			<img src="img/0.png" alt="" />
+			<img src="img/0.png" alt="" />时
+			<img src="img/0.png" alt="" />
+			<img src="img/0.png" alt="" />分
+			<img src="img/0.png" alt="" />
+			<img src="img/0.png" alt="" />
+		</div>
+	</body>
+	<script>
+		showtime();
+		setInterval(showtime,1000)
+		function showtime () {
+			var oImg=document.getElementsByTagName("img");
+			var now =new Date();
+			var h = now.getHours();
+			var m = now.getMinutes();
+			var s = now.getSeconds();//然后现在要把 这些时间放入一个数组当中；
+			var arr=[parseInt(h/10),h%10,parseInt(m/10),m%10,parseInt(s/10),s%10]
+			for (var i = 0 ; i<oImg.length;i++) {
+				oImg[i].src="img/"+arr[i]+".png"
+			}
+		}
+//		1、先审图，确定页面结构。
+//		2、需要一个定时器-需要一个方法
+//		3、需要获取当前时间，把当前时间保存在数组中
+//		4、遍历图片，把时间和图片一一对应起来
+//		5、先运行定义方法
+	</script>
+</html>

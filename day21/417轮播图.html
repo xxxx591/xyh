@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style>
+		*{margin: 0;padding: 0;list-style: none;}
+		div{height: 400px;width: 600px;position: relative;overflow: hidden;}
+		.oul{width: 3000px;height: 400px;}
+		.oul li{float: left;}
+		.navlist{
+			height: 30px;position: absolute;bottom: 30px;right: 40px;
+			text-align: center;line-height: 30px;
+		}
+		.navlist li{
+			width: 30px;height: 30px;background: rgba(255,255,255,0.4);border-radius: 100px;margin: 10px;float: left;
+		}
+		.navlist>.now{
+			background: #fff;
+		}
+		#leftclick{
+			position: absolute;top: 50%;left: 50px;height: 80px;width: 40px;background:rgba(255,255,255,0.4) ;
+			line-height: 80px;text-align: center;font-size: 30px;font-weight: 900; margin-top: -40px;display: none;
+		}
+		#rightclick{
+			position: absolute;top: 50%;right: 50px;height: 80px;width: 40px;background:rgba(255,255,255,0.4) ;
+			line-height: 80px;text-align: center;font-size: 30px;font-weight: 900; margin-top: -40px;display: none;
+		}
+	</style>
+	<body>
+		<div id="outer">
+			<ul class="oul" style="transition: all 2s;">
+				<li><img src="images/1.png"/></li>
+				<li><img src="images/2.png"/></li>
+				<li><img src="images/3.png"/></li>
+				<li><img src="images/4.png"/></li>
+				<li><img src="images/1.png"/></li>
+			</ul>
+			<ul class="navlist">
+				<li class="now">1</li>
+				<li>2</li>
+				<li>3</li>
+				<li>4</li>
+			</ul>
+			<p id="leftclick">&lt;</p>
+			<p id="rightclick">&gt;</p>
+		</div>
+	</body>
+	
+	<script>
+		var outer=document.getElementById("outer");
+		var oul=document.getElementsByClassName("oul")[0];
+		var navlist=document.getElementsByClassName("navlist")[0].children;
+		var changePage=document.getElementsByTagName("p");
+
+		banner(outer,oul,navlist,changePage,2000,600)
+		function banner (outer,oul,navlist,changePage,duration,banwidth) {
+			//outer:显示窗口；oul：图片列表；navlist：按钮列表；changePage：左右按钮图片；
+			//duration：定时器时间间隔；banwidth：图片宽度；
+			var time=setInterval(move,duration);
+			var time1;
+			var maxnum=navlist.length;
+			var num=0;
+			function move () {
+				num++;
+				if (num>maxnum) {
+					oul.style.transition=""
+					num=0;
+					oul.style.marginLeft="0px";
+					time1=setTimeout(function  () {
+						num++
+						oul.style.transition="all 2s";
+						oul.style.marginLeft=num*(-banwidth)+"px";
+					},10)
+				}
+				oul.style.marginLeft=num*(-banwidth)+"px";
+				
+				
+				
+				
+				for (var i =0;i<navlist.length;i++) {
+					navlist[i].className=""
+				}	
+				navlist[num>=maxnum?0:num].className="now"
+			}
+			for (var i=0;i<navlist.length;i++) {
+				navlist[i].index=i
+				navlist[i].onclick=function () {
+					num=this.index;
+					oul.style.marginLeft=num*(-banwidth)+"px"
+					for (var j=0;j<navlist.length;j++) {
+						navlist[j].className=""
+					}
+					this.className="now"
+				}
+			}
+			changePage[0].onclick=function  () {
+				num--;
+				if (num<0) {
+					oul.style.transition=""
+					num=maxnum;
+					time1=setTimeout(function  () {
+						num--
+						oul.style.transition="all 2s";
+						oul.style.marginLeft=num*(-banwidth)+"px";
+					},10)
+				}
+				oul.style.marginLeft=num*(-banwidth)+"px";
+				for (var i=0 ;i<navlist.length;i++) {
+					navlist[i].className=""
+				}
+				navlist[num<0?maxnum:num].className="now"
+			}
+			changePage[1].onclick=function  () {
+				num++;
+				if (num>maxnum) {
+					oul.style.transition=""
+					num=0;
+					time1=setTimeout(function  () {
+						num++
+						oul.style.transition="all 2s";
+						oul.style.marginLeft=num*(-banwidth)+"px";
+					},10)
+				}
+				oul.style.marginLeft=num*(-banwidth)+"px";
+				for (var i=0 ;i<navlist.length;i++) {
+					navlist[i].className=""
+				}
+				navlist[num>=maxnum?0:num].className="now"
+			}
+			outer.onmouseover=function () {
+				clearInterval(time);
+				changePage[0].style.display="block";
+				changePage[1].style.display="block";
+			}
+			outer.onmouseout=function () {
+				time=setInterval(move,duration);
+				changePage[0].style.display="none";
+				changePage[1].style.display="none";
+			}
+		}
+		outer.addEventListener("onclick",click)
+	</script>
+</html>

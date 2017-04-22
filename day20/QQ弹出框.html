@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		#box{
+			background: url(img/qqlist.png)no-repeat;
+			width: 292px;
+			height: 697px;
+			float: right;
+		}
+		#nav{
+			width: 62px;
+			height: 57px;
+			background: url(img/qqnav.png)no-repeat;
+			position: absolute;
+			top: 596px;
+			right: 237px;
+		}
+		#sec{
+			width: 328px;
+			height: 149px;
+			background: url(img/qqjieshao.png)no-repeat;
+			position: absolute;
+			top: 540px;
+			right: 310px;
+			display: none;
+		}
+	</style>
+	<body>
+		<div id="box">
+			<div id="nav"></div>
+			<section id="sec"></section>
+		</div>
+	</body>
+	<script>
+		var box=document.getElementById("box");
+		var nav = document.getElementById("nav")
+		var sec = document.getElementById("sec")
+		var flag=false;
+		nav.onmouseover=function  () {
+			
+			setTimeout(function () {
+				sec.style.display="block"
+			},500)
+		}
+		nav.onmouseout=function  () {
+			setTimeout(function  () {
+				if (flag==false) {
+					sec.style.display="none"
+				}
+			},500)
+		}
+		sec.onmouseover=function  () {
+			flag=true;
+			sec.style.display="block"
+		}
+		sec.onmouseout=function  () {
+			flag=false;
+			sec.style.display="none"
+		}
+	</script>
+</html>

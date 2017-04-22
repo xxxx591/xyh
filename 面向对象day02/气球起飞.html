@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style media="screen">
+        .ballon{
+          width: 81px;
+          height: 119px;
+          background: url(老师的代码day02/demo/image/ballon.png) no-repeat;
+          position: absolute;
+          top: 60px;
+          left: 100px;
+        }
+        input{position: absolute;left: 850px;}
+    </style>
+	<body>
+		<h1>0</h1>
+	</body>
+	<script>
+	var sec = document.getElementsByTagName("h1")[0]
+	var fenshu = 0;
+		function Ballon () {
+			this.top=500;
+			this.left=Math.random() * 800;
+			this.score1=parseInt(Math.random() *12);
+			console.log(this.score1)
+			this.init();
+			this.fly();
+			this.none1()
+			var that=this
+		}
+		Ballon.prototype.init=function  () {
+			this.dom=document.createElement("div")
+			document.body.appendChild(this.dom);
+			this.dom.className="ballon"
+			this.dom.style.left = this.left + "px";
+			this.dom.style.top = this.top + "px";
+			this.X=-(this.score1 % 4) *96;
+			
+			this.Y=-parseInt(this.score1/4) * 120;
+
+			this.dom.style.backgroundPosition=this.X + "px " + this.Y + "px";
+		}
+		Ballon.prototype.fly=function  () {
+			var self = this ;
+			setInterval(function () {
+				if (self.score1<4) {
+					self.top--;
+					self.dom.style.top=self.top + "px";
+				}
+				if (self.score1>=4&&self.score1<8) {
+					self.top-=3;
+					self.dom.style.top=self.top + "px";
+				}
+				if (self.score1>=8) {
+					self.top--;
+					self.dom.style.top=self.top + "px";
+				}
+				
+				if (self.top==-100) {
+					self.dom.remove();
+				}
+				
+			},20)
+			
+		Ballon.prototype.none1=function  () {
+			self.dom.onclick=function  () {
+				self.dom.remove();
+				fenshu += (self.score1+1);
+				switch (self.score1){
+					
+						break;
+					default:
+						break;
+				}
+				sec.innerHTML=fenshu
+			}
+		}
+		
+		}
+		setInterval(function  () {
+			var r =new Ballon();
+			
+		},1000)
+		
+		
+	</script>
+</html>
+      <!--思路，要使气球飞起来，我需要先创建一个气球；
+      然后这个气球要给添加上一个固定样式，并且固定位置；
+      这个时候就要添加一个定时器（保存this），改变top值 来实现气球飞起来的效果；
+      然后我需要添加多个不同样式的气球， 不同样式的气球就要改变图片的position值；
+       position的X和Y都需要改变，改变的值为96px和120PX; 
+       然后需要在随机位置出现气球， 就改变left的值
+       给函数添加点击事件，-->
+       

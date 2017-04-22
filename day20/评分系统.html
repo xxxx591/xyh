@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style>
+		div{
+			width: 500px;
+			height: 500px;
+			position: absolute;
+			margin: auto;
+			top: 0; bottom: 0;
+			left: 0; right: 0;
+			background: #abcdef;
+			text-align: center;
+			line-height: 500px;
+		}
+	</style>
+	<body>
+		<img src="bg_01.png" onclick="chang()"/>
+		<img src="bg_01.png" onclick="chang()"/>
+		<img src="bg_01.png" onclick="chang()"/>
+		<img src="bg_01.png" onclick="chang()"/>
+		<img src="bg_01.png" onclick="chang()"/>
+		<div id="add">这是一个广告！
+			<span style="color: red;">
+				5
+			</span>秒之后消失
+		</div>
+	</body>
+	<script>
+		var oImg=document.getElementsByTagName("img")
+		oImg.onclick=function chang() {
+			oImg.src="bg_03.png"
+		}
+		var add = document.getElementById("add")
+		var span = add.getElementsByTagName("span")[0];
+		console.log(span.innerHTML)
+		setInterval(function () {
+			span.innerHTML-=1
+			if (span.innerHTML==0) {
+				add.style.display="none";
+				clearInterval;
+			}
+		},1000)
+
+	function  timemax(){
+		console.log(1)
+		setTimeout(timemax,1000)
+	}
+		timemax()
+	</script>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		#list{
+			height: 32px;
+		}
+		#list li{
+			width: 80px;
+			margin: 0 10px;
+			height: 30px;
+			line-height: 30px;
+			border-bottom:2px solid white ;
+			float: left;
+			text-align: center;
+			list-style: none;
+		}
+		#nav{
+			height: 300px;
+			
+			overflow: hidden;			
+		}
+		#nav li{
+			margin: 0 10px;
+			height: 298px;
+			width: 400px;
+			border: 1px solid pink;
+		}
+	</style>
+	<body>
+		<!--<ul id="list">
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>-->
+		<!--<p id="u11">123</p>
+		<p id="u22">1233</p>-->
+		<ul id="list">
+			<li>优才学院</li>
+			<li>HTML课程</li>
+			<li>安卓课程</li>
+			<li>PHP课程</li>
+		</ul>
+		<ul id="nav">
+			<li class="nvalist">优才学院</li>
+			<li class="nvalist">HTML课程</li>
+			<li class="nvalist">安卓课程</li>
+			<li class="nvalist">PHP课程</li>
+		</ul>
+	</body>
+	<script>
+	var nav= document.getElementById("nav");
+	var list= document.getElementById("list");
+	var lister =list.getElementsByTagName("li")  	//获取特定UL下的一列li
+	var nvalist =nav.getElementsByClassName("nvalist")  //获取特定ul下的一系列class
+	for (var i=0;i<nvalist.length;i++) {
+		nvalist[i].index=i
+		console.log(i)		//这个nvalist[i].index=i 是为了保存该列表的下标 方便进行比较，进行同步操作。
+	}
+	for (var i=0;i<lister.length;i++) {
+		lister[i].index=i;  // 保存改lister的下标  
+		lister[i].onclick=function () {   //新建一个点击事件，
+			for (var j=0 ;j<lister.length;j++) {    //遍历数组 
+				if (this.index==nvalist[j].index) {  //这个判断语句要判断的是点击事件的下标和要显示的下标是否一致。
+				//如果这里用lister[i]就只是那个li的下标和要显示的下标。  就不会触发点击事件。
+				//这个this.index 和 lister[i]的区别在于前者可以实现点击效果，后者不能实现点击效果。
+					this.style.borderBottomColor="pink"    //判断这个数组下标如果一致就显示出来， 不一样就隐藏
+					nvalist[j].style.display="block"
+				} else{
+					lister[j].style.borderBottomColor=""
+					nvalist[j].style.display="none";
+				}
+			}
+		}
+		console.log(i)
+	}
+		
+//	for (var i=0;i<nav.children.length;i++) {
+//		lister[i].onclick=function () {
+//			for (var i=0 ;i<lister.length;i++) {
+//				nvalist[i].style.display="none"
+//			}
+//			nvalist[i].style.display="block"
+//		}
+//	}
+
+//		var list= document.getElementById("list");
+//		console.log(list.children[0])
+//		var i ;
+//		for (i = 0 ; i<list.children.length;i++) {
+//			list.children[i].xie=i
+//			list.children[i].onclick=function () {
+//				this.style.background="red";
+//				console.log(this.xie)
+//			}
+//		}//这个函数可以获取 未命名的li的下标，并且给他们添加背景颜色
+//		var a =document.getElementById("u11")
+//		var b =document.getElementById("u22")
+//		a.onclick=function () {
+//			console.log(this)
+//			var self = this;
+//			setInterval(function () {
+//				console.log(this); //这个this 是当前对象的this，然后这个定时器中没有指定变量，
+//								   //所以无法打印出当前a的属性值，从而打印出window的值
+//				console.log(self);
+//			},2000)
+//		}
+//		b.onclick=function () {
+//			console.log(this)
+//		}
+		
+	</script>
+</html>

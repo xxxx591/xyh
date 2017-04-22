@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		*{
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+		div{
+			width: 500px;height: 300px;overflow: hidden;position: relative;
+		}
+		.navlist{
+			width: 2500px;height: 300px;
+		}
+		.navlist li {
+			list-style: none;width: 500px;height: 300px;float: left;
+		}
+		.title{
+			float: left;position: absolute; bottom: 30px;left: 240px;
+			height: 30px;
+		}
+		.title li{
+			width: 30px;height: 30px;border-radius: 50%;background: rgba(255,255,255,0.6);float: left;margin: 0 15px;text-align: center;line-height: 30px;
+		}
+		.title>.now{
+			background: #fff;
+		}
+		p{
+			width: 30px;height: 60px;background: rgba(255,255,255,0.4);line-height: 60px;font-size: 30px;text-align: center;
+		}
+		#p11{position: absolute;top: 50%;left: 30px;margin-top: -30px;}
+		#p22{position: absolute;top: 50%;right: 30px;margin-top: -30px;}
+	</style>
+	<body>
+		<div>
+			<ul class="navlist">
+				<li style="background: wheat;"></li>
+				<li style="background: red;"></li>
+				<li style="background: teal;"></li>
+				<li style="background: cyan;"></li>
+				<li style="background: wheat;"></li>
+			</ul>
+			<ul class="title">
+				<li class="now">1</li>
+				<li>2</li>
+				<li>3</li>
+				<li>4</li>
+			</ul>
+			<p id="p11">&lt;</p>
+			<p id="p22">&gt;</p>
+		</div>
+	</body>
+	<script type="text/javascript" src="轮播图-王云.js" ></script>
+	<script>
+		var oUl = document.getElementsByClassName("navlist")[0]  //获取ul的列表
+		var title = document.getElementsByClassName("title")[0].children  //获取按钮
+		console.log(title[0])
+		var numlist=0;   //定义一个数字 用来比较下标。
+		var timer=setInterval(fun,2000); //创建一个定时器
+		function fun () {
+			if (numlist==4) {
+				numlist=0;
+				oUl.style.marginLeft="0"
+			}
+			numlist++;
+			startMove(oUl,{"margin-left":numlist*-500})  //载入插件 输入数值，第一个为运动方向  第二个为运动距离
+			for (var i =0 ;i<title.length;i++) {
+				title[i].className=""  //清除按钮样式
+			}
+			title[numlist>=4?0:numlist].className="now";   //给按钮添加样式
+		}
+		//现在是控制小白点点击事件，首先对小白点进行遍历，让我点击哪个小白点 图片跳到哪里
+		for (var j =0;j<title.length;j++) {
+			
+			title[j].index=j  //这个是保存下标 不然每次点击的下标都是最后一个
+			
+			title[j].onclick=function() {
+				clearInterval(timer)
+				startMove(oUl,{"margin-left":this.index*-500})  //这里有个重点，就是这个数值为 这个点击按钮的下标值，下标值要保存
+				
+				for (var k=0 ;k<title.length;k++) {
+					title[k].className=""  //清除按钮的样式
+				}	
+				this.className="now"   //添加按钮样式
+				numlist=this.index
+				timer=setInterval(fun,2000)
+			}
+		}
+		
+		//1、先确定结构，需要在DIV中创建一个ul列表存放图片，一个ul列表存放按钮，两个p标签存放左右键；
+		//2、需要一个定时器来实现轮播效果，遍历数组，保存下标，
+	</script>
+</html>

@@ -1,0 +1,30 @@
+*{
+	margin:0;
+	padding:0;
+}
+
+ul{	
+	position:relative;
+	list-style-type:none;
+	float:left;
+}
+.game{
+	display:none;
+}
+.box:hover .game{
+	display:block;
+}
+.box1{
+	position:absolute;
+	top:25px;
+}
+.box1:hover .game1{
+	display:block;
+}
+a{
+	text-decoration:none;
+}
+.word:hover{
+	color:red;
+	text-decoration:underline;
+}

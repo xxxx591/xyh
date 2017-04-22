@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="index.css"/>
+  <title>day05</title>
+ </head>
+ <body>
+	<div class="index school"  ></div>
+	<div class="index1 school"></div>
+	<div class="index2 school"></div>
+	<div class="index3 school"></div>
+	<div class="index4 school"></div>
+	<div class="index5 school"></div>
+	<div id="box"></div>
+	<br/><br/><br/><br/>
+	<p>点卡就可接受的恢复了捡身法</p>
+	<br/><br/><br/><br/><br/>
+	<p id="font-size">
+		大家好，我的名字叫哈哈哈哈
+	</p>
+	<span>
+		《三国演义》反映了丰富的历史内容，人物名称、地理名称、主要事件与《三国志》基本相同。人物性格也是在《三国志》留下的固定形象基础上，才进行再发挥，进行夸张、美化、丑化等等，这也是历史演义小说的套路。《三国演义》一方面反映了较为真实的三国历史，照顾到读者希望了解真实历史的需要；另一方面，根据明朝社会的实际情况对三国人物进行了夸张、美化、丑化等等。
+	</span>
+	<ul type="square">
+		<li>
+			<b>·</b><a href="#">陈建成董事长出席ATB集团召开年度销售大会长嘚吧嘚把嘚吧</a>
+		</li>
+		<li>
+			<b>·</b><a href="#">陈建成董事长出席ATB集团召开年度销售大会长嘚吧嘚把嘚吧</a>
+		</li>
+		<li>
+			<b>·</b><a href="#">陈建成董事长出席ATB集团召开年度销售大会长嘚吧嘚把嘚吧</a>
+		</li>
+		<li>
+			<b>·</b><a href="#">陈建成董事长出席ATB集团召开年度销售大会长嘚吧嘚把嘚吧</a>
+		</li>
+	</ul>
+	<br/>
+	<br/>
+ </body>
+</html>

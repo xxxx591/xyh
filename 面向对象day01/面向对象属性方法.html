@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script>
+	
+	/*	var xiaoming=new Object();
+		xiaoming.name="小明";
+		xiaoming.age=18;
+		xiaoming.sex="男"
+		xiaoming.sayhellow=function  () {
+			alert("大家好我叫"+this.name)
+			alert("我今年"+this.age+"岁了")
+			alert("我是"+this.sex+"生");
+		}
+		xiaoming.chengzhang=function  () {
+			this.age++
+		}
+		
+		xiaoming.sayhellow();
+		xiaoming.chengzhang();
+		xiaoming.chengzhang();
+		xiaoming.chengzhang();
+		xiaoming.sayhellow();*/
+		
+		
+		var xiaoming={
+			name:"小明",
+			age:18,
+			sex:"男",
+			sayhellow : function(){
+				alert("大家好我叫"+this.name)
+				alert("我今年"+this.age+"岁了")
+				alert("我是"+this.sex+"生");
+			},
+			chengzhang : function(){
+				this.age++
+			}
+		}
+		xiaoming.sayhellow();
+		xiaoming.chengzhang();
+		xiaoming.chengzhang();
+		xiaoming.chengzhang();
+		xiaoming.sayhellow();
+		
+		//面向对象一定要记得加逗号，不然就输出不了
+	</script>
+</html>

@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" text="text/type" href="index.css"/>
+<title>剑桥学院</title>
+</head>
+<body>
+	<div id="head"></div>
+	<div id="shcool"></div>
+	<div id="lb"></div>
+	<div id="photo"></div>
+	<div id="news"></div>
+	<div id="four"></div>
+	<div id="hz_shcool"></div>
+	<div id="botton"></div>
+	<div></div>
+</body>
+</html>

@@ -1,0 +1,8 @@
+*{
+	margin:0px;
+	padding:0px;
+	}
+div{
+	background-image: url(photo3.png);
+	height:78px;
+	}

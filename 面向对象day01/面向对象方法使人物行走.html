@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style>
+	.box{
+			width: 64px;height: 128px;background:url(images/run.png)no-repeat ;
+			background-position: 0px -256px;position: absolute;
+		}
+	</style>
+	<body>
+		
+	</body>
+	<script>
+		
+		function xingzou (left,top,PositionX,PositionY) {
+			this.top=top;  //这个函数的top为top(形参)
+			this.left=left;
+			this.box=document.createElement("div");  //创建一个div
+			document.body.appendChild(this.box);  // 在页面中生成这个div
+			this.box.className="box"    //给这个div添加一个box的样式
+			this.box.style.left=this.left+"px";  //给div确定left位置
+			this.box.style.top=this.top+"px"; //给div确定top位置
+			this.box.style.backgroundPosition=PositionX+"px"+" " + PositionY +"px";  //这个是确定雪碧图的坐标
+			var box = this.box // 定义this.box  以便于可以在之后的函数内使用
+			var num  = 0;  //定义移动数值
+			var self=this
+			var timer = setInterval(function  () {  //生成一个定时器
+				num+=2;  //div 相对于页面移动 
+				PositionX++; //雪碧图移动
+				if (PositionX>7) {
+					PositionX=0
+				} 
+				if(num>400){
+					clearInterval(timer);
+					box.remove()
+				}
+				box.style.left=num+"px";  
+//				console.log(this.num)
+				box.style.backgroundPosition=-PositionX*64+"px"+" " + PositionY +"px";
+			},80)
+		}
+		
+		var r = new xingzou(0,0,0,0);
+		 new xingzou(0,100,0,-128);
+		 new xingzou(0,200,0,-256);
+		 new xingzou(0,300,0,-384);
+		 setInterval(function  () {
+		 	 new xingzou(Math.random() * 400, Math.random() * 400,0,-256);
+		 },1000)
+	</script>
+</html>

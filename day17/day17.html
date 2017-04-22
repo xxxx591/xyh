@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+
+	</body>
+	<script>
+		
+//		var i;
+//		var a=0;
+//		var arr =[];
+//		while(i!="exit"){
+//			i=prompt("请输入名字");
+//			if (i!="exit") {
+//				arr[a]=i;
+//				a++;
+//			}
+//		}
+//		console.log(arr);
+		
+//		var arr=[]
+//		var i =0 ;
+//		var input ;
+//		while ((input=prompt("名字"))!="exit"){
+//				arr[i++]=input;
+////				     ↑这一步能直接将递增放入数组中
+//		}
+//		console.log(arr)
+//		arr=[1,2,3,4,5]
+//		function maxget (arr) {
+//			var max=arr[0]
+//			for (var i=1;i<arr.length;i++) {
+//				arr[i]>max&&(max=arr[i]);
+//			}
+//			return max;
+//		}
+//		console.log(maxget(arr));
+		
+//			arr=[1,2,3,4,5,6]
+//		function isnum(arr,n){
+//			for (var i=0;i < arr.length;i++) {
+//				if(n==arr[i]){
+//					return i;
+//				}
+//			}
+//			return -1
+//		}
+//		console.log(isnum([1,2,3,4,5],2))
+		
+//		function maopao (arr) {
+//			for (var i=0;i<arr.length-1;i++) {
+//				for (j=0;j<arr.length-1-i;j++) {
+//					var mid;
+//					if (arr[j]>arr[j+1]) {
+//						mid=arr[j];
+//						arr[j]=arr[j+1];
+//						arr[j+1]=mid;
+//					}
+//				}
+//			}
+//			return arr;
+//		}
+//		console.log(maopao([1,34,562,3,4,234,2,3213]))
+
+//	var a=prompt("数字1");
+//	var b =prompt("数字2")
+//	var c;
+//	if (a>b) {
+//		console.log(a)
+//	} else{
+//		c=a;
+//		a=b;
+//		b=c;
+//		console.log(a);
+//	}
+//	var arr=[]
+//	var xxxy=function das(arr) {
+//		if (arr.length==1&&arr[0]%2==0) {
+//			console.log("ture")
+//		}else if (arr.length==1&&arr[0]%2>0){
+//			console.log("false")
+//		}else if (arr.length>1&&(arr[0]+arr[1])%2==0) {
+//			console.log("ture")
+//		} else{
+//			console.log("false")
+//		}
+//	}
+//	xxxy([2]);
+//	var n = prompt("请输入一个数字");
+//	var a=0;
+//	for ( var i = 1 ; i<=n;i++) {
+//		if (n%i==0) {
+//			a++;	
+//		}
+//	}
+//	if (a==2) {
+//		document.write(n+"是一个质数")
+//	} else{
+//		document.write(n+"不是一个质数")
+//	}
+	var a=111;
+	var arr=[];
+		for (var i = 0; i<a;i++) {
+			arr[i]=( function (n) {
+				return function () {
+					console.log(n)
+				}
+			})(i)
+		}
+	arr[3]();
+	</script>
+</html>

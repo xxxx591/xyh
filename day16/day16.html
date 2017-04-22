@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script>
+//		var fun1=function(){
+//			console.log(1)
+//		};
+//		fun1()
+//		var fun1=function(){
+//			console.log(2)
+//		}
+//		输出结果为1，因为var  声明提前，值留在原地
+//		var a=100;
+//		function fun(a){
+//			a++;
+//			console.log(a);
+//		}
+//		fun(a);
+//		console.log(a);
+		//这个题目存在一个全局变量与局部变量以及声明提前，导致a的输出结果不同；
+//		var a=4 ;
+//		function fun(){
+//			a=5;
+//			console.log(a);
+//		}
+//		fun();
+//		console.log(a);
+//		这个题目就是一个全局变量以及局部变量,导致函数内部的变量改变;
+//		function foo(){
+//			return 1;
+//		}
+//		foo();//2
+//		function foo(){
+//			console.log(2)
+//		}
+//		foo();//2
+//		var foo = 100;
+//		console.log(foo);//100
+//		foo();//报错
+		//这个报错是因为var 重新定义了FOO的意义，所以无法找到foo这个函数
+//		var fun1=function(){
+//			console.log(1)
+//		}
+//		fun1();
+//		var fun1=function(){
+//			console.log(2)
+//		}
+//		var  声明提前，值留在原地
+//		第二题
+//		var a=1
+//		var s=0;
+//		var sum = function sum(n){	
+//		for (i=1;i<=n;i++) {
+//			a=a*i
+//			s=a+s
+//		}
+//		console.log(s)
+//		return s;
+//		}
+//		console.log(sum(2))
+		//第三题
+//		var n =0 ;
+//		function ric (a) {
+//			while (a){
+//				n=a%10+n*10;
+//				a=parseInt(a/10);
+//			}
+//			return n;
+//		}
+//		console.log(ric(12345))
+//		第四题
+//		var a=0;
+//		var b=1;
+//		var s=0;
+//		function fb(n){
+//		for (var i=3;i<=n;i++) {
+//			s=a+b;
+//			a=b
+//			b=s
+//		}
+//		return s
+//		}
+//		console.log(fb(7))
+//		第五题
+//		function fun(a,b,c){
+//			return (function (a,b){
+//				return a>=b?a:b;
+//			})(a,b)+c
+//		}
+//		console.log(fun(1,2,3))
+//		
+//		function fun (a,b,c) {
+//			return (function (a,b){
+//				return a>=b?a:b;  		//这个题目的重点就是在于匿名函数的第二个（）内要添加已知函数的变量，
+////										不然就无法找到变量，无法运算。
+//			})(a,b)+c
+//		}
+//		
+//		function fun(a,b,c){
+//			if (a>=b) {
+//				return a+c
+//			} else{
+//				return b+c
+//			}
+//		}
+//		console.log(fun(1,2,3))
+		//菲波那切数列用递归的方法做
+//		function ric(n){
+//			if (n==1||n==2) {
+//				return 1;
+//			} else{
+//				return ric(n-1)+ric(n-2);  这个地方的理解就是通过函数的自运行不断向上运算
+									//		直到循环到一直的数字然后进行计算。
+//			}
+//		}
+//		console.log(ric(6))
+//		用递归的方法做阶乘
+//		function ric (n) {
+//			if (n==1) {
+//				return 1;
+//			} else{
+//				return n*ric(n-1);
+//			}
+//		}
+//
+//		var arr=[3]
+//		var week=["日","一","二","三","四","五","六",]
+//		
+//		console.log(week[2]);
+//		for (var i=0;i<week.length;i++) {
+//			week[i]="星期"+week[i];
+//		}
+//		console.log(week);
+//	var arr=[1,2,3,4,5,6];
+//	console.log(arr.length);
+//	for ( var i=0;i<arr.length;i++) {
+//		function () {
+//			console.log(i)
+//		}
+//	}
+//	
+//	var arr = [];
+//	
+//	
+//	var a = prompt("qing")
+//	
+//	for (var i = 0; i < a; i++) {
+//		
+//		arr[i] = (function(n) { 
+//			return function() {
+//				alert(n);
+//			}
+//		})(i);
+//	}
+//	
+//	
+//	arr[5]();
+//	var arr = [];
+//	for (var i = 0 ; i<100 ;i++) {
+//		arr[i] = (function (n) {      //这个n就是形参，是一个变量 不能用双引号括起来，   然后这个n是用来接收我们已知的形参的
+//			return function () {    
+//				console.log(n)
+//			}
+//		})(i)
+//	}
+//	arr[1]();
+//	var arr=[]
+//	for (var i = 0; i < 10 ;i++) {
+//		arr[i] = (function (n) {
+//			return function () {
+//				console.log(n)
+//			}
+//		})(i)
+//	}
+	
+	</script>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		*{
+			margin: 0;padding: 0;
+		}
+		.one{width: 600px;height: 600px;background: red;margin: 0 auto;}
+		.two{width: 400px;height: 400px;background: yellow;margin: 0 auto;}
+		.thr{width: 200px;height: 200px;background: blue;margin: 0 auto;}
+		
+	</style>
+	<body>
+		<div class="one" onclick="fun2()">
+			<div class="two">
+				<div class="thr">
+					
+				</div>
+			</div>
+		</div>
+	</body>
+	<script>
+		var odiv=document.getElementsByTagName("div")
+		function fun () {//永远指操作元素目标对象
+			var src=event.srcElement||event.target
+			console.log(src.className)
+		}
+		function fun2 () {
+			console.log(this)
+		}
+		function fun3 () {
+			console.log(div.className)
+		}
+	</script>
+</html>

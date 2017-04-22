@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		div{
+			width:80px;
+			height:80px;
+			border-radius:50%;
+			position: absolute;
+		}
+	</style>
+	<body>
+	</body>
+	<script>
+		function Tan(left,top){
+			this.left = left;
+			this.top = top;
+			var div=document.createElement('div');
+			document.body.appendChild(div);
+			div.style.left=this.left+'px';
+			div.style.top=this.top+'px';
+			
+			var stepx = 10;
+			var stepy = 10;
+			setInterval(function (){
+				var l=stepx+div.offsetLeft;
+				var t=stepy+div.offsetTop;
+				
+				if(l>=document.documentElement.clientWidth-div.offsetWidth){
+					stepx=-10;
+					l=document.documentElement.clientWidth-div.offsetWidth;
+					div.style.backgroundColor = bianse();
+				}else if(l<=0){
+					stepx=10;
+					l=0;
+					div.style.backgroundColor = bianse();
+				};
+				
+				if(t>=document.documentElement.clientHeight-div.offsetHeight){
+					stepy=-10;
+					t=document.documentElement.clientHeight-div.offsetHeight;
+					div.style.backgroundColor =bianse();
+				}else if(t<=0){
+					stepy=10;
+					t=0;
+					div.style.backgroundColor =bianse();
+				}
+				
+				div.style.left=l+'px';
+				div.style.top=t+'px';
+			},20);
+		};
+		
+		var bianse=function(){
+			var tt="0123456789abcdef";
+			var cc= tt.substr(Math.floor(Math.random()*17),1);
+			for (var i = 0; i < 5; i++) {
+				cc+= tt.substr(Math.floor(Math.random()*17),1);
+			}
+			return  "#" + cc
+		};
+		
+		var tim1 = setInterval(function(){
+			new Tan(Math.random()*500,Math.random()*500);
+		},200);
+		
+		var tim2=setTimeout(function(){
+			clearInterval(tim1);
+		},3000);
+		
+		
+	</script>
+</html>

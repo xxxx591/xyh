@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body style="position: relative;">
+		<div id="box" style="height: 300px;width: 300px;background: red;position: absolute;">
+			
+		</div>
+	</body>
+	<script>
+	var box=document.getElementById("box");
+	document.onmousedown=function  () {
+		var reX=event.offsetX//获取div左上角的坐标；
+		var reY=event.offsetY;
+		document.onmousemove=function  () {
+			box.style.left=event.clientX-reX+"px";
+				box.style.top=event.clientY-reY+"px"
+		}
+	}
+	document.onmouseup=function(){
+		document.onmousemove=null
+	}
+	</script>
+</html>

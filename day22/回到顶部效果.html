@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body style="position: relative;">
+		<p id="nav"style="position: fixed; bottom: 50px;right: 50px;display: none;">回到顶部</p>
+		<div style="height: 5000px;"></div>
+	</body>
+	<script>
+		var sec=document.getElementById("nav")
+		window.onscroll=function  () {
+			var scrolltop=document.documentElement.scrollTop+document.body.scrollTop;
+			console.log(scrolltop)
+			if (scrolltop>500) {
+				sec.style.display="block"
+			} else{
+				sec.style.display="none"
+			}
+			sec.onclick=function  () {
+				document.body.scrollTop=0;
+			}
+		}
+	</script>
+</html>

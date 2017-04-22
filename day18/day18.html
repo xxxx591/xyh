@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<ul>
+			<li id="list"></li>
+			<li id="list"></li>
+			<li id="list"></li>
+		</ul>
+	</body>
+	<script>
+		var arr1=["aa","bb","cc"];
+		var arr2=["dd","ee","ff"];
+//		console.log(arr1.join("-"));  join是将数组进行拼接。并且可以自定义拼接符。
+//		console.log(arr1)			join不改变原数组
+//		console.log(arr1.concat("哈哈",arr2));  concat是为数组添加 元素或者数组，
+//		console.log(arr1);			concat不改变原数组
+//		console.log(arr1.slice(0,2))  //slice是将选取数组中的元素，选取范围为[start,end)  end 不获取
+//		console.log(arr1)			slice不改变原数组
+//		console.log(arr1.splice(0,1,"添加值"));  splice是删除从值1开始 多少个元素，值3为添加值，可加可不加；
+//		console.log(arr1);         splice会改变原数组
+//		console.log(arr1.reverse());reverse是将原数组进行翻转;
+//		console.log(arr1);  		reverse会改变原数组;
+//		console.log(arr1.sort())	sort是将数组进行排序  但是不会按自己想要的来，需要加一个排序函数
+//		var arr3=[123,312,12,3,4312,4213,31,23,44]
+//		function  arrsort(a,b) {
+//			return a - b;
+//		}
+////		console.log(arr3.sort(arrsort))
+//		console.log(arr1.push(33213)) //push会在数组末尾添加一个元素  不会改变之前的下标;
+//		console.log(arr1)
+//		console.log(arr1.pop())		  pop会删除数组末尾最后一个元素;
+//		console.log(arr1.unshift(1123)) unshift会在数组开头添加一个元素,会改变下标;
+//		console.log(arr1.shift())shift会删除数组开头第一个元素,会改变下标;				这四个都是可以有多个值，用"，"隔开
+		
+//		function  changs(arr) {
+//			var a=[]
+//			while (arr>0){
+//				a.unshift(arr%2);
+//				arr=parseInt(arr/2);
+//				
+//			}
+//			return a.join("");
+//		}
+//		console.log(changs(8))  	二进制转换
+//		var arrer=[
+//		[1,2,3,4],
+//		[1,2,3,4],
+//		[1,2,3,4],
+//		[1,2,3,4]
+//		]
+//		console.log(arrer[1][3]);
+		
+//		for (var row = 0; row< arrer.length; row++) {
+//			for (var col=0 ;col<arrer[row].length;col++) {
+//				console.log(arrer[row][col])
+//			}
+//		} 	 			二维数组的遍历，
+//		var n=prompt("输入邮箱") ;
+//		var i =n.indexOf("@");
+//		console.log(n.slice(0,i));
+//		console.log(n.slice(i+1));
+//		var say = "no zuo no die"
+//		function  sayflast(str) {
+//			var arr=str.split(" ")
+//			for (var i = 0 ; i<arr.length; i++) {
+//				arr[i]=arr[i][0].toUpperCase()+arr[i].slice(1);
+//			}
+//			return arr.join(" ")
+//		}
+//		console.log(sayflast(say));
+//		var say="abcdef";
+//		function rever (str) {
+//			return str.split("").reverse().join("");
+//		}
+//		console.log(rever(say))
+//		将字符串反转 的固定套路,将字符串转为数组,然后用数组的反转命令 再转为字符串
+//		作业一;
+		
+	function num () {
+		var arr=[];
+		for (;arr.length<6;) {
+			var n = Math.ceil(Math.random()*33)
+			if (arr.indexOf(n)==-1) {
+				arr.push(n)
+			}
+		}
+		var blue = Math.ceil(Math.random()*16)
+		console.log(arr+"|"+blue)
+	}
+	num()
+	</script>
+</html>

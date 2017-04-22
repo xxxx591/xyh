@@ -1,0 +1,44 @@
+*{
+	margin:0;padding:0
+}
+#wis{
+	width:100px;
+	height:100px;
+	background-color:yellowgreen;
+	border-radius:
+	}
+#word{
+	color:#342dfa;
+	}
+div.box{
+	margin:10px;
+	width:200px;
+	height:200px;
+	border-width:19px;
+	border-style:solid;
+	-webkit-border-image:url(border.png) 27 repeat;
+	}
+div.cir{
+	width:400px;
+	height:200px;
+	border-radius:100% 100% 0 0/200% 200% 0 0;
+	background-color:red;
+	box-shadow:-1px -10px 20px 4px black;
+	margin:0 auto;
+	}
+section.change{
+	width:100px;
+	height:100px;
+	background-color:red;
+	}
+div{
+	width:100px;
+	height:100px;
+	overflow:hidden;
+	}
+#aa11{
+	background-color:red;
+	}
+#aa22{
+	background-color:yellow;
+	}

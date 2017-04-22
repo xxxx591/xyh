@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="mine.css"/>
+<title>简介</title>
+</head>
+<body>
+	<div id="bigbox" class="box">
+		<div id="box1">
+		<img src="1123.jpg" width="105px" height="140px" id="photo"/>
+		<span id="name" font face="微软雅黑">谢沅航</span>
+		<span id="sex">男·23岁</span>
+		<h4 id="span1">基本信息</h4><hr/>
+		<ul style="color:white" id="ul1">
+			<li>性别：男</li>
+			<li>出生日期：1994年7月</li>
+			<li>政治面貌：团员</li>
+			<li>常住地址：湖南邵阳</li>
+			<li>身高体重：180cm/72kg</li>
+		</ul>
+		<h4 style="color:white;text-align:right">联系方式</h4><hr/>
+		<ol id="ol1">
+			<li>手机:18573978397</li>
+			<li>QQ:250173310</li>
+			<li>邮箱:250173319@qq.com</li>
+			<li>现居地:湖南邵阳</li>
+		</ol>
+		<h4 style="text-align:right;color:white">兴趣爱好</h4><hr/>
+		<span style="font-size:13px;color:white">喜欢骑行、旅游等户外活动喜欢阅读各类课外书籍、杂志关注互联网，每天浏览新闻网站</span><br/>
+		<h4 style="text-align:right;color:white">掌握技能</h4><hr/>
+		Spss:&nbsp;&nbsp;&nbsp;<meter value="70" min="0" max="100" title="70%"></meter><br/>
+		Word:&nbsp;<meter value="60" min="0" max="100" title="60%"></meter><br/>
+		Excel:&nbsp;&nbsp;<meter value="65" min="0" max="100" title="65%"></meter><br/>
+		PPT:&nbsp;&nbsp;&nbsp;&nbsp;<meter value="55" min="0" max="100" title="55%"></meter>
+		</div>
+		<div id="box2">
+			<div id="word22" style="width:344px;height:125px">
+				<div id="box3">求职简历</div>
+				<div id="box4"></div>
+				<div id="box5"></div>
+				<p id="p1" style="color:#024171;">教育背景</p>
+			</div>
+			<h4 id="word1" >2012.9-2016.7 吉首大学 土木工程 本科<br/> 主修科目:</h4>
+			<p id="p2" >《钢结构设计原理》《高层建筑结构设计》《工程地质》《工程结构抗震》等</p><br/>
+			<div id="box6"></div>
+			<p id="p3" style="color:#024171;">实践活动</p>
+			<table style="width:344px;height:100px;" border="1" cellspacing="0" align="center">	
+				<tr>
+					<td>时间</td>
+					<td>经历</td>
+				</tr>
+				<tr>
+					<td>2012-2013</td>
+					<td>创立“技术联盟工作室”负责学校的网络安装与故障处理以及网络设备的销售</td>
+				</tr>
+				<tr>
+					<td>2014-2015</td>
+					<td>参加校园创业杯 获得二等奖</td>
+				</tr>
+				<tr>
+					<td>2015-2016</td>
+					<td>在湖南省四建筑安装有限公司施工员实习</td>
+				</tr>
+				<hr style="border:2px solid black;margin:0 0"/>
+			</table>
+		</div>
+	</div>
+	<br/><br/><br/><br/><br/><br/>
+	<div class="mybox">
+		<div id="my" class="mybox">谢沅航</div>
+		<div id="lele" class="mybox">文乐</div>
+		<div id="lele1" class="mybox">乐乐</div>
+		<div id="lele2" class="mybox">乐猪</div>
+		<div id="lele3" class="mybox">女神</div>
+	</div>
+	<a href="#my">谢沅航</a>
+	<a href="#lele">文乐</a>
+	<a href="#lele1">乐乐</a>
+	<a href="#lele2">乐猪</a>
+	<a href="#lele3">女神</a>
+
+	
+</body>
+</html>

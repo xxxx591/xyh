@@ -1,0 +1,33 @@
+*{
+	margin:0;
+	padding:0
+	}
+li{
+	line-height:30px;
+	}
+a{
+	text-decoration:none;
+}
+ul{
+	float:left;
+	width:100px;
+	list-style-type:none;
+}
+.buy {
+	display:none;
+}
+.box:hover .buy{
+	display:block;
+	background:red;
+}
+.buy li:hover{
+	background:blue;
+}
+.span:hover{
+	color:red;
+	
+}
+.box{
+	border-left:1px solid black;
+	border-right:1px solid black;
+}

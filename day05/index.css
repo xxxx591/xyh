@@ -1,0 +1,90 @@
+*{
+	margin:0px;
+	padding:0px;
+	}
+body{
+	}
+li{
+	background-image: url(photo1.png);
+	height:78px;
+	background-repeat:no-repeat;
+	
+	}
+.index{
+	width:100px;
+	background-image:url(photo3.png);
+	float: left;
+	}
+.index1{
+	width:124px;
+	background-image:url(photo3.png);
+	background-position:-99px 0;
+	float: left;
+	}
+.index2{
+	float: left;
+	width:146px;
+	background-image:url(photo3.png);
+	background-position:-223px 0;
+	}
+.index3{
+	float: left;
+	width:120px;
+	background-image:url(photo3.png);
+	background-position:-370px 0;
+	}
+.index4{
+	float: left;
+	width:124px;
+	background-image:url(photo3.png);
+	background-position:-489px 0;
+	}
+.index5{
+	float: left;
+	width:122px;
+	background-image:url(photo3.png);
+	background-position:-613px 0;
+	}
+li:hover{
+	background-image: url(photo1.png);
+	}
+
+#box{
+	width:200px;
+	height:50px;
+	background-image:linear-gradient(to top, red 40%,white 60%,yellow 80%,blue 100%);
+	} 
+p{
+	color:red;
+	font-size:30px;
+	font-family:"shiguan";
+	line-height:15px;
+	}
+@font-face{
+	font-family:shiguan;
+	src:url(shiguangti.ttf);
+}
+
+#font-size{
+	color:#32738a;
+	font-family:"xiami";
+	font: bold  40px/30px  "xiami";
+	}
+@font-face{
+	font-family:xiami;
+	src:url(xiamiyinle.ttf);
+	}
+span{
+	color:blue;
+	font-size:30px;
+	font-family:"xiami";
+	}
+a{text-decoration:none;color:#666;}
+li{
+	font-size:20px;
+	line-height:25px;
+	width:200px;
+	white-space:nowrap;
+	text-overflow:ellipsis;
+	overflow:hidden;
+	}

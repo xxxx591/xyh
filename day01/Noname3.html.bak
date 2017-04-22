@@ -1,0 +1,52 @@
+<!Doctype	html>
+<html>
+
+	<head>
+		<title>欢迎进入麻瓜之家</title>
+		<meta charset ="UTF-8"/>
+	</head>
+	<body id ="麻瓜页面" class ="对没错" title= "麻瓜说明" style= "" text= "#7A240E" bgcolor= "#628369" align="center">
+		大家好，祝你们每天开心！&copy"版权c";&reg;"商标r"&lt;"小于号"&gt;"大于号"&nbsp；"空格" 
+
+		<i>斜体</i>
+		<u>下划线</u>
+		<sub>下标2</sub>
+		<sup>上标&copy</sup>
+		<em>斜体</em>
+		<strong>加粗字体</strong>
+		<h1 align = "center">恶魔法则</h1>
+		<p align ="center">当我们在事后回顾历史的时候，往往会现，在历史的滚滚洪流之下，即使再英明的领袖也难免有头脑昏的时候。<br/>——《帝国编年史第35篇第7记——关于罗兰时代的回顾反思一二》<hr/></p>
+		<p align ="center"> &nbsp;&nbsp;&nbsp;&nbsp;这是一个夏日的午后，天上悬挂的烈日还在无情的放射着热量。为了迎接即将到来的凯旋仪式，码头上，无数穿着鲜红铠甲的近卫军已经将港口一号码头前围得水泄不通。
+    而就在码头的外围一百步的地方，焦头烂额的帝都治安所的士兵已经把自己吃奶的力气都使出来了。他们很多人的衣服被撕破了，原本闪亮的肩章被扯掉了，神气的帽子被抓掉了，就连靴子都被踩掉了无数只。
+    让一千名奉命在港口外围维护秩序的治安所士兵们无奈的是，他们面对的是过五万名围观的热情帝都市民。
+    热情洋溢的围观市民们准备好的鲜花，欢呼，掌声——当然，还有很多少女甚至准备好了献出自己的热吻甚至贞操。在这样的情绪骚动之下，一千名治安所士兵感觉自己就好像汪洋之中的一条破船，随时都有被掀翻的可能。</p>
+
+		<div>纯粹的快标签</div>
+		<span>纯粹的行内标签</span>
+		<div>
+			<span>一般是行内标签放在块标签里面</span>
+		</div>
+		<hr size="20px" width="300px" color="red"/>
+		<hr size="20px" width="300px" color="orange" />
+		<a href ="https://www.baidu.com/" target = "blank">进入百度</a>
+		<img src ="C:\Users\lx\Desktop\学习文件\day01\磐石案例3_10.PNG" valign ="middle"/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<a href = "#麻瓜页面">返回顶部</a><br/>
+		<a href = "http://www.baidu.com/" target ="blank">进入百度</a><br/>
+		<a href = "../1.zip">下载页面</a><br/>
+		<a href = "Tel:185739783097">电话号码</a><br/>
+	</body>
+</html>

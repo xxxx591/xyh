@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+		
+			.smallball{
+				width: 40px;height: 40px;background: red;border-radius: 50%;position: absolute;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div id="bigbox" style="width: 500px;height: 500px;border: 1px solid black;">
+			
+		</div>
+		<button id="pause" >暂停</button>
+	</body>
+	<script>
+		var pause = document.getElementById("pause");
+		var bigbox = document.getElementById("bigbox");
+		function BallMove () {
+			this.move();
+			this.ball();
+			this.left = parseInt(Math.random()*bigbox.offsetWidth);
+			this.top = parseInt(Math.random()*bigbox.offsetHeight);
+			this.dom.style.left = this.left + "px";
+			this.dom.style.top = this.top + "px"
+			
+		}
+		BallMove.prototype.ball = function () {
+			this.dom=document.createElement("div");
+			this.dom.className = "smallball";
+			document.body.appendChild(this.dom);
+			
+		} 
+		BallMove.prototype.move = function  () {
+			var self = this
+			var timer = setInterval(function  () {
+			self.left++;
+			self.top++;
+			
+			self.dom.style.left = self.left + "px";
+			self.dom.style.top = self.top + "px"
+			
+		},10)
+			
+			pause.onclick=function  () {
+			clearInterval(timer)
+		}
+		}
+		
+		
+		
+		
+		new BallMove();
+		
+	</script>
+</html>

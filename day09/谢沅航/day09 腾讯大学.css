@@ -1,0 +1,748 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+ul{
+	list-style-type: none;
+}
+em{
+	font-style: normal;
+}
+a{
+	text-decoration: none;
+}
+.box{
+	width: 100%;
+	margin: 0 auto;
+}
+.bigbox{
+	width: 1500px;
+	height: 100%;
+}
+.head{
+	width: 1438px;
+	height: 78px;
+	margin: 0 auto;
+}
+.head p {
+	float: left;
+}
+.head ul{
+	box-shadow: 0px 0px 40px #888888;
+	width: 736px;
+	float: left;
+	background-image:url(腾讯大学/nav-on.png); 
+	height:78px;
+	overflow: hidden;
+	margin: 0 auto;
+}
+#nav,#nav2,#nav3,#nav4,#nav5,#nav6{
+	background-image: url(腾讯大学/nav.png);
+	height:78px;
+	background-repeat:no-repeat;
+	float: left;
+	}
+#nav{
+	width:100px;
+	background-image:url(腾讯大学/nav.png);
+	float: left;
+	}
+#nav2{
+	width:124px;
+	background-image:url(腾讯大学/nav.png);
+	background-position:-99px 0;
+	float: left;
+	}
+#nav3{
+	float: left;
+	width:146px;
+	background-image:url(腾讯大学/nav.png);
+	background-position:-223px 0;
+	}
+#nav4{
+	float: left;
+	width:120px;
+	background-image:url(腾讯大学/nav.png);
+	background-position:-370px 0;
+	}
+#nav5{
+	float: left;
+	width:124px;
+	background-image:url(腾讯大学/nav.png);
+	background-position:-489px 0;
+	}
+#nav6{
+	float: left;
+	width:122px;
+	background-image:url(腾讯大学/nav.png);
+	background-position:-613px 0;
+	}
+#nav:hover{
+	background-image: url(腾讯大学/nav-on.png);
+	}
+#nav2:hover{
+	background-image: url(腾讯大学/nav-on.png);
+	}
+#nav3:hover{
+	background-image: url(腾讯大学/nav-on.png);
+	}
+#nav4:hover{
+	background-image: url(腾讯大学/nav-on.png);
+	}
+#nav5:hover{
+	background-image: url(腾讯大学/nav-on.png);
+	}
+#nav6:hover{
+	background-image: url(腾讯大学/nav-on.png);
+	}
+#top_right1{
+	display: inline-block;
+	background: url(腾讯大学/11_04.png);
+	width: 78px;
+	height: 82px;
+}
+#top_right2{
+	width: 78px;
+	height: 78px;
+	display: inline-block;
+	margin-left: 50px;
+}
+.top_right{
+	position: relative;
+	width: 135px;
+	float: left;
+}
+#right_button{
+	width: 62px;
+	height: 38px;
+	background: #fd7701 center;
+	border: 0;
+}
+#right_input{
+	height: 36px;
+	width: 230px;
+	outline: none;
+}
+
+.top_right p{
+	
+	margin: 10px;
+	display:none ;
+	position: absolute;
+	left:-181px;top:57px;
+	border-top: 1px solid #fd7701;
+}
+.top_right:hover p{
+	display: block;
+}
+
+#top_right3{
+	width: 78px;
+	height: 78px;
+	display: inline-block;
+	background: url(腾讯大学/11_06.png);
+	float: left;
+}
+.box2{
+	margin: 0 auto;
+	width: 1440px;
+}
+.box3{
+
+	margin: 0 auto;
+	width: 1065px;
+	height: 247px;
+	position: relative;
+}
+.box3 p{
+	float: left;
+}
+.box3_a{
+	overflow: hidden;
+	width:1000px ;
+	height:180px;
+	position: absolute;
+	top: 34px;
+	left: 0;
+}
+#box3_photo{
+	padding-top: 18px;
+	vertical-align:middle;
+}
+#box3_photo span{
+	display: inline-block;
+	height: 247px;
+	vertical-align: middle;
+	font-size: 60px;
+	overflow: hidden;
+	color: #d9dbde;
+}
+#news01{
+	margin-top: 11px;
+	display: block;
+}
+#news01 a{
+	font-size: 20px;
+	line-height: 30px;
+	color: black;
+	margin-left: 20px;
+	
+}
+#news02{
+	height: 24px;
+	line-height: 24px;
+	font-size: 12px;
+	color: #cba388;
+	margin:25px 0 0 -134px;
+}
+#news03{
+	float: left;
+	display: block;
+	width: 530px;
+	font-size: 13px;
+	height: 90px;
+	line-height: 20px;
+	margin-left: 20px;
+}
+#live_bg{
+	width: 414px;
+	height: 206px;
+	float: right;
+	background: url(腾讯大学/live-bg.png)no-repeat;
+}
+.mdzz{
+	width: 1500px;
+	height: 2074px;
+	background: #d6dae2;
+	overflow: hidden;
+}
+.mdzz_box{
+	
+	margin: 0 auto;
+	height: 2074px;
+	
+}
+.mdzz_left{
+	width: 780px;
+	height: 2074px;
+	background: #d6dae2;
+	float: left;
+}
+#hot{
+	height: 30px;
+	font-size: 20px;
+	font-weight: 500;
+	text-indent: 1.2em;
+	margin: 15px;
+	background: url(腾讯大学/icon-lesson.png) no-repeat;
+}
+
+#hot1{
+	color: #888;
+	font-size: 10px;
+	float: right;
+}
+#hot11{
+	float: left;
+}
+#hot11 li{
+	float: left;
+}
+#hot11 li img{
+	width: 226px;
+	height: 160px;
+	margin-left: 30px;
+	
+}
+#zbyg{
+	width: 740px;
+	height: 353px;
+	padding: 15px 20px 20px;
+	margin-top: 20px;
+	background: #f2f1ef;
+}
+#pass1{
+	width: 226px;
+	height: 160px;
+	list-style-type: none;
+	}
+#word1{
+	width: 226px;
+	height: 273px;
+	float: left;
+	margin-left: 20px;
+	background: #fff;
+}
+li{
+	list-style-type: none;
+}
+#wenzi{
+    font-size: 14px;
+    color: #888888;
+}
+#worda{
+	text-decoration: none;
+	color: black;
+	border-top: 2px solid #1fc0ef;
+	width: 226px;
+	display: block;
+}
+#zbyg_01{
+	width: 740px;
+	height: 418px;
+	padding: 15px 20px 20px;
+	margin-top: 20px;
+	background: #f2f1ef;
+}
+#xie{
+	width:700px ;
+
+	background:white url(腾讯大学/images/bg1_12.png)no-repeat;
+	float: right;
+	height: 86px;
+	background-position: 100% 0%;
+    padding: 15px 20px 5px 20px;
+    margin-top: 20px;
+}
+#xie_01{
+	float: left;
+	margin-right: 20px;
+}
+#xie_photo{
+	width: 122px;
+	height: 86px;
+}
+h3{
+	font-weight: 100;
+}
+#xie_time{
+	width: 550px;
+	height: 24px;
+	line-height: 24px;
+	font-size: 12px;
+	color: #888;
+	float: left;
+}
+#xie_span{
+	width: 600px;
+}
+#goods_box{
+	width: 780px;
+	height: 795px;
+	background: #f2f1ef;
+	
+}
+#goods_body{
+	padding: 15px 20px 20px;
+    margin-top: 20px;
+}
+#goods{
+	width: 350px;
+	height: 369px;
+	float: left;
+}
+#goods_01{
+	width: 350px;
+	height: 369px;
+	float: left;
+	margin-left: 30px;
+}
+#goods_title{
+	width: 299px;
+	height: 24px;
+	display: block;
+	float: left;
+	text-indent: 1.5em;
+	background: url(腾讯大学/images/bg_title_01.png)no-repeat;
+	margin-left: 20px;
+	color: #51c9f1;
+}
+#goods_title2{
+	width: 299px;
+	height: 24px;
+	display: block;
+	float: left;
+	text-indent: 1.5em;
+	background: url(腾讯大学/images/bg_title_02.png);
+	margin-left: 20px;
+	color: #f6a544;
+}
+#goods_title3{
+	width: 299px;
+	height: 24px;
+	display: block;
+	float: left;
+	text-indent: 1.5em;
+	background: url(腾讯大学/images/bg_title_03.png);
+	margin-left: 20px;
+	color: #ff6c00;
+}
+#goods_title4{
+	width: 299px;
+	height: 24px;
+	display: block;
+	float: left;
+	text-indent: 1.5em;
+	background: url(腾讯大学/images/bg_title_04.png);
+	margin-left: 20px;
+	color: #a3be60;
+}
+#goods_more{
+	display: block;
+	width: 30.27px;
+	height: 28px;
+	float: right;
+	font-size: 10px;
+	line-height: 28px;
+	color: #a1968c;
+}
+#goods_photo{
+	width: 350px;
+	height: 160px;
+	list-style-type: none;
+	}
+#goods_word{
+	width: 350px;
+	height: 30px;
+	line-height: 30px;
+	float: left;
+	font-size: 14px;
+	color: black;
+}
+#goods_wenzi{
+	display: block;
+	width: 350px;
+	height: 40px;
+    font-size: 14px;
+    color: #888888;
+    float: left;
+}
+#mdzz_right{
+	display: inline-block;
+	width: 265px!important;
+	height: 100%;
+	margin-top: 20px;
+	margin-left: 20px;
+	background: #fcfafb;
+	float: left;
+}
+#rank_top{
+	width: 260px;
+	height: 1165px;
+	border-bottom: 1px solid #e4e3e2;
+	background: #fcfafb;
+	float: right;
+	position: relative;
+}
+
+#hot_right{
+	height: 30px;
+	font-size: 20px;
+	font-weight: 500;
+	text-indent: 1.2em;
+	margin: 15px;
+	background: url(腾讯大学/icon-rank.png) no-repeat;
+}
+#rank_word{
+	float: left;
+	margin: 15px;
+	width: 226px;
+	height: 34px;
+	float: left;
+	background: url(腾讯大学/rank-tab-gray-bg.png);
+}
+.rank_number{
+	float: left;
+	text-align: center;
+	width: 20px;
+	height: 26px;
+	line-height: 26px;
+	background: #51C9F1;
+}
+.rank_number1{
+	float: left;
+	height: 26px;
+	line-height: 26px;
+	font-size: 12px;
+	padding-left: 10px;
+	color: white;
+	width: 188px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.rank_number2{
+	float: left;
+	height: 26px;
+	line-height: 26px;
+	font-size: 15px;
+	padding-left: 10px;
+	color: black!important;
+	width: 188px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.rank_box{
+	position: absolute;
+	top: 263px;
+}
+.rank_box2{
+	position: absolute;
+	top: 448px;
+}
+.rank_box3{
+	position: absolute;
+	top: 633px;
+}
+.rank_box4{
+	position: absolute;
+	top: 818px;
+}
+.rank_box5{
+	position: absolute;
+	top: 1003px;
+}
+.rank_box6{
+	float: left;
+	margin-top: 3px;
+}
+#rank_word01{
+	width: 110px;
+	height: 32px;
+	line-height: 32px;
+	text-align:center;
+	border-left: 1px solid #ccc;
+	border-top: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+	margin-left: 1px;
+	float: left;
+}
+#rank_word02{
+	width: 110px;
+	height: 32px;
+	line-height: 32px;
+	text-align:center;
+	border-bottom: 1px solid #ccc;
+	margin-right: 1px;
+	float: left;
+}
+#rank_word1{
+	display: block;
+	width: 110px;
+	height: 32px;
+	line-height: 32px;
+	text-align:center;
+	color: #ccc;
+}
+#rank_word12{
+	display: block;
+	width: 110px;
+	height: 32px;
+	line-height: 32px;
+	text-align:center;
+	color: #ccc;
+}
+#rank_word02:hover #rank_word1{
+	border-left: 0px solid #ccc;
+	border-top: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+	border-bottom: 0px solid #ccc;
+	color: #000;
+}
+
+#rank_top1{
+	width: 226px;
+	height: 1040px;
+	float: left;
+    margin: 0px 15px 15px 15px;
+}
+#top_photo{
+	width: 226px;
+	height: 165px;
+	display: block;
+	float: left;
+	margin-bottom: 20px;
+}
+#photo{
+	width: 226px;
+	height: 165px;
+}
+#rank_middle{
+	width: 266px;
+	height: 398px;
+	float: left;
+	border-bottom: 1px solid #ccc;
+}
+#shcool_01{
+	margin-left: 20px;
+	margin-bottom: 20px;
+}
+#shcool_h3{
+	font-size: 18px;
+	line-height:30px ;
+	text-indent: 1em;
+}
+#shcool_p{
+	margin: 15px;
+	font-size: 14px;
+	line-height: 24px;
+}
+#rank_bottom{
+	width: 266px;
+	height: 120px;
+	margin-top: 20px;
+}
+#shcool_p1{
+	font-size: 14px;
+	line-height: 24px;
+	margin-left: 15px;
+}
+#exam{
+	width: 200px;
+	height: 119px;
+	background: #D4D4D4;
+	margin: 20px 25 px;
+	float: left;
+	font-size: 36px;
+	text-align: center;
+	color: #343434;
+	
+}
+#exam_a{
+	display: block;
+	float: left;
+	width: 160px;
+	height: 47px;
+	font-size: 25px;
+	margin: 0 20px;
+	color: white;
+	background: #000000;
+	line-height: 47px;
+}
+.line{
+	width: 1100px;
+	height: 4px;
+}
+.blue{
+	background:#1fc0ef;
+	height: 3px;
+	display: block;
+	width: 252.5px;
+	float: left;
+}
+.yellow{
+	background: #f6a544;
+	height: 3px;
+	display: block;
+	width: 252.5px;
+	float: left;
+}
+.green{
+	background: #8cbe00;
+	height: 3px;
+	display: block;
+	width: 252.5px;
+	float: left;
+}
+.orange{
+	background: #ff6c00;
+	height: 3px;
+	display: block;
+	width: 252.5px;
+	float: left;
+}
+.box_bottom1{
+	width: 1500px;
+	height: 388px;
+	background: #f6f6f6;
+}
+.bottom01{
+	width: 797px;
+	height: 321px;
+	float: left;
+	
+}
+
+#bottom_p1{
+	font-size: 14px;
+	height: 30px;
+	line-height: 30px;
+	padding-top: 20px;
+}
+#bottom_ul{
+	width: 797px;
+	height: 150px;
+}
+#bottom_li{
+    margin: 5px 33px 15px 13px;
+	display: block;
+	width: 80px;
+	height: 30px;	
+	float: left;
+	color: #000;
+}
+#bottom_li img{
+	width: 80px;
+	height: 30px;
+	
+}
+#bottom_ul2{
+	width: 797px;
+	height: 78px;
+}
+#bottom_li2{
+
+	height: 26px;
+	float: left;
+    line-height: 26px;
+    margin: 0 20px 0 13px;
+}
+#bottom_aaa{
+	height: 26px;
+	float: left;
+    line-height: 26px;
+    font-size: 14px;
+    color: #3f3f3f;
+}
+.bottom01_right{
+	float: left;
+	width: 105px;
+	height: 321px;
+}
+#bottom01_rul{
+	float: left;
+	width: 105px;
+	height: 142px;
+	margin-top: 20px;
+	
+}
+.box_bottom2{
+	width: 1500px;
+	height:126px;
+	background: #bababa;
+	float: left;
+}
+#last1{
+	float: left;
+	width: 1010px;
+	height: 126px;
+}
+
+#last_a{
+	color: #000;
+	font-size: 14px;
+}
+
+#last1 p{
+	text-align: center;
+	height: 24px;
+	line-height: 24px;
+	font-size: 14px;
+}
+.ggg{
+	margin: auto;
+	float:left;
+	text-align: center;
+	box
+}

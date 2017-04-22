@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script>
+		function People (name,age) {
+			this.name = name;
+			this.age = age;
+		}
+		
+		function Gril (name, age ,sex ) {
+			People.apply(this,arguments);//arguments 可以用数组表示
+			this.sex = sex ;
+			//People 可以用this.construtor 代替
+		}
+		
+		var g = new Gril("小明",18,"男");
+		console.log(g);
+		console.log(g.name);
+	</script>
+</html>

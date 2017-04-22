@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+	*{
+		margin: 0;
+		padding: 0;
+	}
+		div{
+			width: 500px;height: 300px;overflow: hidden;
+		}
+		ul{
+			width: 2500px;height: 300px;
+		}
+		ul li{
+			list-style: none;width: 500px;height: 300px;float: left;
+		}
+	</style>
+	<body>
+		<div>
+			<ul id="box">
+				<li style="background: firebrick;">1</li>
+				<li style="background: gold;">2</li>
+				<li style="background: hotpink;">3</li>
+				<li style="background: navajowhite;">4</li>
+				<li style="background: khaki;">5</li>
+				<li style="background: firebrick;">1</li>
+			</ul>
+		</div>
+	</body>
+	<script type="text/javascript" src="轮播图插件.js" ></script>
+	<script>
+		var box=document.getElementsByTagName("ul")[0]
+		
+		var i =0;
+		setInterval(function  () {
+			box.style.marginLeft=i*(-500)+"px";
+			i++;
+			if (i==6) {
+				i=1;
+				
+			} 
+		},2000)
+	</script>
+</html>

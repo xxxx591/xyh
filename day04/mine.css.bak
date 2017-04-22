@@ -1,0 +1,112 @@
+*{
+	margin:0;
+	padding:0;
+	}
+#bigbox{
+	width:488px;height:700px; 
+	}
+
+#box1{
+	width:144px;height:700px;
+	border: 1px solid black;
+	background-color:#87A6BD
+	}
+#box2{
+	margin:-702px 145px;
+	width:344px;height:700px;
+	border: 1px solid black;
+	}
+#photo{
+	margin:16px;
+	}
+#name{
+	color:white;
+	font-size:35px;
+	margin:0px 15px;
+	}
+#sex{
+	color:white;
+	font-size:25px;
+	margin:0 25px;
+	}
+#span1{
+	text-align:right;
+	color:white;
+	}
+#ul1{
+	font-size:13px;
+	}
+#ol1{
+	font-size:14px;
+	color:white;
+	}
+#box3{
+	text-align:center ;
+	font-size:40px;
+	color:white;
+	margin:10px 25px;
+	width:220px;
+	height:80px;
+	background-color:#024171;
+	}
+#box4{
+	border:40px solid transparent;
+	border-left: 40px solid #024171;
+	margin:-90px 245px;
+	}
+#box5{
+	width:40px;
+	height:40px;
+	background-color:#024171;
+	border-radius:50%;
+	margin:92px 20px; 
+	}
+#p1{
+	font-size:30px;
+	margin:-133px 90px;
+	}
+#p2{
+	font-size:17px
+	}
+#word22{
+	border-bottom:5px solid black;
+	}
+#box6{
+	width:40px;
+	height:40px;
+	background-color:#024171;
+	border-radius:50%;
+	margin:1px 20px; 
+	}
+#p3{
+    margin:-44px 90px ;
+	font-size:30px;
+	}
+table{
+	margin:53px 0; 
+	}
+.mybox{
+	overflow:hidden;
+	width:100px;
+	height:100px;
+	}
+#my{
+	background-color:#a12244;
+	border-radius:200% 0 200% 0/200% 0 200% 0;
+	}
+#lele{
+	background-color:#b13244;
+	border-radius:0 200% 0 200%/0 200% 0 200%;
+	}
+#lele1{
+	background-color:#c13244;
+	border-radius:0% 0% 200% 200%/0% 0% 400% 400%;
+	}
+#lele2{
+	background-color:#d13244;
+	border-radius:200% 200% 0 0/400% 400% 0 0;
+	}
+#lele3{
+	background-color:#e13244;
+	border-radius:50%
+	}

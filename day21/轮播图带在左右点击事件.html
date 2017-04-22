@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style>
+		*{
+			margin: 0;padding: 0;list-style: none;
+		}
+		.box{
+			width: 600px;height: 400px;overflow: hidden;margin: 100px auto;position: relative;
+		}
+		.navlist{
+			width: 3600px;
+		}
+		.navlist li{
+			float:left ;
+		}
+		.nowlist{
+			position: absolute;bottom: 30px;right: 50px;
+		}
+		.nowlist li{
+			float: left;width: 25px;height: 25px;border-radius: 50%;background: rgba(0,0,0,0.6);margin: 10px;text-align: center;line-height: 25px;
+		}
+		.nowlist>.now{
+			background: #fff;
+		}
+		p{	display: none;
+			width: 30px;height: 60px;background: rgba(255,255,255,0.4);line-height: 60px;font-size: 30px;text-align: center;
+		}
+		#p11{position: absolute;top: 50%;left: 30px;margin-top: -30px;}
+		#p22{position: absolute;top: 50%;right: 30px;margin-top: -30px;}
+	</style>
+	<body>
+		<div class="box">
+			<ul class="navlist">
+				<li><img src="images/1.png" alt="" /></li>
+				<li><img src="images/2.png" alt="" /></li>
+				<li><img src="images/3.png" alt="" /></li>
+				<li><img src="images/4.png" alt="" /></li>
+				<li><img src="images/5.png" alt="" /></li>
+				<li><img src="images/1.png" alt="" /></li>
+			</ul>
+			<ul class="nowlist">
+				<li class="now">1</li>
+				<li class="">2</li>
+				<li class="">3</li>
+				<li class="">4</li>
+				<li class="">5</li>
+			</ul>
+			<p id="p11">&lt;</p>
+			<p id="p22">&gt;</p>
+		</div>
+	</body>
+	<script type="text/javascript" src="轮播图-王云.js" ></script>
+	<script>
+	var obox=document.getElementsByClassName("box")[0];
+	var oul=document.getElementsByClassName("navlist")[0];
+	var title=document.getElementsByClassName("nowlist")[0].children;
+	var op=document.getElementsByTagName("p")
+	console.log(op[0])
+	var num=0;
+	var timer=setInterval(fun,2000)
+	function fun () {
+		if (num==title.length) {
+			num=0;
+			oul.style.marginLeft="0";
+		}
+		num++;		
+		startMove(oul,{"margin-left":num*-600});
+		for (var i=0;i<title.length;i++) {
+			title[i].className=""
+		}
+		title[num>=title.length?0:num].className="now"
+		for (var j=0;j<title.length;j++) {
+			title[j].index=j;
+			title[j].onclick=function  () {
+				clearInterval(timer)
+				startMove(oul,{"margin-left":this.index*-600})
+				for (var k=0;k<title.length;k++) {
+					title[k].className=""
+				}
+				this.className="now"
+				num=this.index
+				timer=setInterval(fun,2000)
+			}
+		}
+		obox.onmousemove=function  () {
+			clearInterval(timer);
+			op[0].style.display="block";
+			op[1].style.display="block";
+		}
+		obox.onmouseout=function  () {
+			timer=setInterval(fun,2000);
+			op[0].style.display="";
+			op[1].style.display="";
+		}
+		op[0].onclick=function  () {
+			num--
+			if (num<0) {
+				num=4
+			}
+			startMove(oul,{"margin-left":num*-600})	
+			for (var i=0;i<title.length;i++) {
+			title[i].className=""
+			}
+			title[num>=title.length?0:num].className="now"
+		}
+		op[1].onclick=function  () {
+			num++
+			if (num>title.length) {
+				num=1
+				oul.style.marginLeft="0"
+			}
+			startMove(oul,{"margin-left":num*-600})	
+			for (var i=0;i<title.length;i++) {
+			title[i].className=""
+			}
+			title[num>=title.length?0:num].className="now"
+		}
+	}
+	</script>
+</html>

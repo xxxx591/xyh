@@ -1,0 +1,5 @@
+*{
+	margin:0;
+	padding:0;
+}
+#head,#shcool,#lb,#photo,#news,#four,#hz_shcool,

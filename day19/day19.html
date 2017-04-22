@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css1.css"/>
+	</head>
+	<body>
+		<ul id="list">
+			<li class="list1">1</li>
+			<li>2</li>
+			<li class="list1">3</li>
+			<li id="fourlist">4</li>
+			<li class="list1">5</li>
+			<li>6</li>
+			<li class="list1">7</li>
+			<li>8</li>
+		</ul>
+		<!--<input type="text" id="clock" style="width: 17px;" />时:
+		<input type="text" id="clock_m" style="width: 17px;" />分:
+		<input type="text" id="clock_s" style="width: 17px;" />秒
+		</br>
+		<button onclick="butstyle(1)">按钮1</button>
+		<button onclick="butstyle(2)">按钮2</button>-->
+	</body>
+	<script>
+		var oul=document.getElementById("list")
+		var oli = oul.childNodes;
+		console.log(oli);
+		for (var i = 0 ; i<oli.length ; i++) {
+			if (oli[i].nodeType==1) {
+				console.log(oli[i].childNodes[0].nodeValue)
+			}
+		}
+		var fourlist=document.getElementById("fourlist")
+		fourlist.onclick=function () {
+			console.log(oli[5].childNodes[0].nodeValue=4);
+		}
+		console.log(oul.firstElementChild.innerHTML);// 打印该元素的第一个子节点的子元素
+		var odiv = document.createElement("div");
+		var op = document.createElement("p");
+		var ospan = document.createElement("span");
+		document.body.appendChild(odiv);  // 将生成的div 放置到body中 让div能得到显示；
+		odiv.appendChild(op);   //将 p标签放置进入div中
+		op.innerHTML="我是p标签";
+		ospan.innerHTML="我是span标签";
+		odiv.insertBefore(ospan,op);  //将span标签放置P标签之前，  前提是 p标签必须存在于 这个div之中
+		console.log(odiv)
+		odiv.removeChild(op);//移除 存在在div中的p标签，不同于none 和block
+		
+//		op.onclick=function () {
+//			op.replaceChild(ospan,op);
+//		}
+//			var obutt= document.createElement("button");
+//			var obutt2= document.createElement("button");
+//			document.body.appendChild(obutt);
+//			document.body.appendChild(obutt2);
+//			obutt.style.height="100px";
+//			obutt.style.width="100px";
+//			obutt.style.background="red";
+//			obutt.onclick=function () {
+//				document.body.background="bg.jpg"
+//			}
+//			obutt2.style.height="100px";
+//			obutt2.style.width="100px";
+//			obutt2.style.background="pink";
+//			obutt2.onclick=function () {
+//				document.body.background="bg_01.jpg"
+//			}
+//			
+//			var now=new Date();
+//			setInterval(function () {
+//				
+//			},1000)
+//			
+//			
+//			setInterval (function clock()
+//			 {var t=new Date()
+//			  var h=t.getHours();
+//			  var m=t.getMinutes();
+//			  var s=t.getSeconds()
+//			  document.getElementById("clock").value=h;
+//			  document.getElementById("clock_m").value=m;
+//			  document.getElementById("clock_s").value=s;
+//			  },100)
+//			var oinput=[];
+//		for (var i =0 ;i<6 ;i++) {
+//			oinput[i] =document.createElement("button");
+//			document.body.appendChild(oinput[i]);
+//			this.oinput[i].style.width="18px"
+//			this.oinput[i].style.height="18px"
+//		}
+//		console.log(oinput)
+//		var n = new Date();
+//		var h=n.getHours();
+//		var m=n.getMinutes()
+//		var s=n.getSeconds()
+//		
+		var lnk = document.getElementsByTagName("link")[0]
+		function butstyle(num) {
+			lnk.href="css"+num+".css"//这里要引入外联样式就必须要先把link样式引入
+		}
+		
+	</script>
+</html>

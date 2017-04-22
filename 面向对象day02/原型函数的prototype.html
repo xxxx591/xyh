@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		
+	</body>
+	<script>
+		function wangzhe () {
+			this.name="文乐"
+		}
+		wangzhe.prototype.say=function  () {
+			console.log("大家好，我叫谢沅航")
+		}
+		var name1= new wangzhe();
+		name1.say();
+		
+		
+		//函数原型的constructor和__proto__;
+		console.log(wangzhe);
+		
+	</script>
+</html>

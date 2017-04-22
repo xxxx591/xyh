@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<button  onclick="move()">开始运动</button>
+		<div style="height: 100px;width: 100px;border-radius: 50%;position: absolute;background: red;"></div>
+	</body>
+	<script>
+		var div=document.getElementsByName("div")[0]
+		var speedX=8;
+		var speedY=8;
+		setInterval(function move () {
+			var l=div.offsetLeft+speedX;
+			var t=div.offsetTop+speedY;
+		},20)
+	</script>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style>
+	*{
+		margin: 0;
+		padding: 0;
+	}
+		#box{
+			height: 600px;
+			width: 300px;
+			background: #FFC0CB;
+			float: right;
+		}
+		#touxiang{
+			height: 100px;
+			width: 100px;
+			background: #ABCDEF;
+			position: absolute;
+			top: 200px;
+			right: 200px;
+			
+		}
+		#sec{
+			position: absolute;
+			top: 200px;
+			right: 320px;
+			height: 150px;
+			width: 200px;
+			border: 1px solid pink;
+			display: none;
+		}
+	</style>
+	<body>
+		<div id="box">
+			<div id="touxiang"></div>
+			<section id="sec"></section>
+		</div>
+		
+	</body>
+	<script>
+		var box=document.getElementById("box");
+		var touxiang = document.getElementById("touxiang")
+		var sec = document.getElementById("sec")
+		var flag=false;
+		touxiang.onmouseover=function () {
+			setTimeout(function  () {
+				touxiang.style.background="#424242"
+				sec.style.display="block"
+			},500)
+		}
+		touxiang.onmouseout=function  () {
+			setTimeout(function  () {
+				touxiang.style.background=""
+				if (flag==false) {
+					sec.style.display="none"
+				}
+			},500)
+		}
+		sec.onmouseover=function  () {
+			flag=true;
+			sec.style.display="block"
+		}
+		sec.onmouseout=function () {
+			flag=false;
+			sec.style.display="none"
+		}
+		box.onclick=function  () {
+			if (flag==false) {
+				box.style.background="#F1F1F1"
+				flag=true;
+			} else{
+				box.style.background="#FFC0CB"
+				flag=false;
+			}
+		}
+	</script>
+
+</html>

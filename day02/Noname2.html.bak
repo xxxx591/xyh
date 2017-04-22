@@ -1,0 +1,41 @@
+<!Doctype html>
+<html>
+	<head>
+		<title>欢迎进入麻瓜之家</title>
+		<meta charset="utf-8"/>
+	</head>
+	<body>
+		<header align="center">页面头部</header>
+		<nav>导航</nav>
+		<section>这个是定义一个指定区域</section>
+		<footer>尾部么么哒</footer>
+		<aside>这个东西出现在哪里？</aside>
+	<form action=""  method ="post/get" enctype="">
+		<input type="width:200px,height:30px " value="请输入你的名字" readonly/><input type="button" value="搜索"/><br/>
+		<input placeholder="请输入你的名字" maxlength ="5" /><br/>
+		密码<input type="password" required/>
+		你的名字
+		<input type="radio" name="name"  checked />男
+		<input type="radio" name="name"/>女<br/>
+		你的兴趣
+		<input type="checkbox" id="eat"/>
+		<label for="eat">吃饭</label>
+		<input type="checkbox"/>睡觉
+		<input type="checkbox"/>打豆豆
+		<input type="submit" value="提交功能"/>
+		<input type="reset"  value="重置功能"/>
+		<input type="button" value="新的按钮"/>
+		<input type="hiddlen" name="" value="" />
+		<input type="file" /><br/>
+		<select>
+			<option>北京</option>
+			<option>上海</option>
+			<option>长沙</option>
+			<option>宁乡</option>
+			<option>邵阳</option>
+		</select>
+		<textarea placeholder="多行文本框"></textarea>
+	</form>
+	</body>
+</html>
+

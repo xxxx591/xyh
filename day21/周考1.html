@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style>
+	*{
+		margin: 0 ;
+		padding: 0;
+		list-style: none;
+	}
+		.box{
+			width: 600px;
+			height: 1000px;
+			border: 1px solid pink;
+			margin: 0 auto;
+			position: relative;
+		}
+		.section{
+			width: 400px;
+			height: 300px;
+			border: 1px solid black;
+			background: pink;
+			margin: 0 auto;
+			display: none;
+			position: absolute;
+			top:60px;left: 100px;;
+		}
+		.section h3{
+			background: chartreuse;
+			height: 30px;
+			text-align: center;
+			font-weight: 100;
+		}
+		.section textarea{
+			height: 200px;
+			width: 360px;
+			margin:20px;
+		}
+		.section h3 em{
+			float: right;
+			height: 30px;
+			width: 30px;
+			text-align: center;
+			line-height: 30px;
+		}
+		.section button{
+			margin-left: 180px;
+		}
+		p{
+			width: 400px;
+			height: 200px;
+			margin: 0 auto;
+			border: 1px solid red;
+			
+		}
+	</style>
+	<body>
+		<div class="box"id="box">
+			<button>发布数据</button>
+			<div class="section">
+				<h3>发布信息
+					<em id ="guan">×</em>
+				</h3>
+				<textarea maxlength="150" id="name"></textarea>
+				<button type="submit">提交信息</button>
+			</div>
+			<p>123</p>
+		</div>
+	</body>
+	<script>
+		var odiv=document.getElementsByClassName("box")[0]
+		var otext=document.getElementById("name");  //name是关键字
+//		var otext = document.getElementsByTagName("textarea")[0];
+//		console.log(otext.value)
+		var box = document.getElementsByClassName("box")[0].firstElementChild;
+		var section = document.getElementsByClassName("section")[0]
+		var guan=document.getElementById("guan")
+		box.onclick=function () {
+			section.style.display="block"
+			otext.value = "aaa";
+		}
+		guan.onclick=function () {
+			section.style.display="none"
+		}
+		section.children[2].onclick=function  () {
+			section.style.display="none"
+			var op= document.createElement("p")
+			odiv.appendChild(op)
+			op.innerHTML= op.innerHTML + otext.value;
+			console.log(otext.value)
+			
+		}
+	</script>
+</html>
