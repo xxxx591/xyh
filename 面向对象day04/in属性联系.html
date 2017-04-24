@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script>
+		var obj = {
+			a : 1,
+			b : "谢沅航",
+			c : "大家好",
+			d : "我的名字"				
+		}
+		
+		obj.__proto__ = {
+			f : "牛批牛批"
+		}
+		Object.prototype.e = "就是这么牛批";
+		console.log( "a" in obj );  //true
+		console.log( "b" in obj );  //true
+		console.log( "e" in obj );  //true
+		console.log( "f" in obj );  //true
+		//  这个in属性会寻找 obj 中 原型链中所有的属性，只要存在就会返回;
+		
+		for( var key in obj){
+			console.log(key + "----" + obj[key])
+		}
+		
+		var obj2 ={
+			a : 1,
+			b : "wenle",
+			c : "大家好",
+			d : "我的名字"	
+		}
+		obj2.__proto__ = {
+			f : "牛批牛批"
+		}
+		Object.prototype.e = "就是这么牛批";
+		console.log(obj2.hasOwnProperty( "a" ));
+		console.log(obj2.hasOwnProperty( "b" ));
+		console.log(obj2.hasOwnProperty( "c" ));
+		console.log(obj2.hasOwnProperty( "d" ));
+		console.log(obj2.hasOwnProperty( "e" ));
+		console.log(obj2.hasOwnProperty( "f" ));
+		
+		//这个hasOwnOroperty就只能寻找到本身的属性 无法寻找到原型链里面的属性；
+		
+		for( var k in obj2 ){
+			console.log( k + " " + obj2[k]);
+		}
+	</script>
+</html>
