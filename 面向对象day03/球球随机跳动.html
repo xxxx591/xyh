@@ -11,7 +11,7 @@
 			
 		</style>
 	</head>
-	<body>
+	<body style="position: relative;">
 		<div id="bigbox" style="width: 500px;height: 500px;border: 1px solid black;">
 			
 		</div>
@@ -27,7 +27,8 @@
 			this.d = 40;
 			this.left = parseInt(Math.random()*bigbox.clientWidth - this.d);
 			this.top = parseInt(Math.random()*bigbox.clientHeight - this.d);
-			
+			this.x = parseInt(Math.random() * 10);
+			this.y  = parseInt(Math.random() * 10);
 			
 		}
 		BallMove.prototype.ball = function () {
@@ -35,46 +36,31 @@
 			this.dom=document.createElement("div");
 			this.dom.className = "smallball";
 			document.body.appendChild(this.dom);
-			this.dom.style.left = this.left + "px";
-			this.dom.style.top = this.top + "px";
+			this.dom.style.left=this.left+"px";
+			this.dom.style.top=this.top+"px";
+			 console.log(this.dom.style.top)
 		} 
 		BallMove.prototype.move = function  () {
-			
 			var self = this
-			var stepx = parseInt(Math.random() * 10);
-			var stepy = parseInt(Math.random() * 10);
-			var timer = setInterval(function  () {
-			var l = stepx + self.dom.offsetLeft;
-			var t = stepy + self.dom.offsetHeight;
+			setInterval(function  () {
+			self.left += self.x;
+			self.top += self.y;
 			
-//			console.log(self.dom)
-			
-			
-			if (l >= bigbox.offsetWidth - self.dom.offsetLeft) {
-				stepx -= 2; 
-				l = bigbox.offsetWidth - self.dom.offsetLeft
-			} else if (l <= 0){
-				stepx = 2;
-				l = 0;
+			if (self.top >= self.dom.clientHeight - self.d || self.top <= 0) {
+				self.y = -self.y; 
 			}
-			console.log(stepx);
-			if (t >= bigbox.offsetHeight - self.dom.offsetTop) {
-				stepy -= 2; 
-				t = bigbox.offsetHeight - self.dom.offsetTop
-			} else if (t <= 0){
-				stepy = 2;
-				t = 0;
+//			console.log(stepx);
+			if (self.left >= self.dom.clientWidth - self.d || self.left <= 0) {
+				self.y = -self.y; 
 			}
 		},1000)
 			
-			pause.onclick=function  () {
-			clearInterval(timer)
-		}
+		
 		}
 		
 		
-		
-		
+		new BallMove();
+		new BallMove();
 		new BallMove();
 		
 	</script>
