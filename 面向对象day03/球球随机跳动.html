@@ -21,24 +21,22 @@
 		var pause = document.getElementById("pause");
 		var bigbox = document.getElementById("bigbox");
 		var BallMove = function BallMove () {
-			
-			this.move();
-			this.ball();
+			var box = this.dom=document.createElement("div");
+			this.dom.className = "smallball";
+			document.body.appendChild(this.dom);
 			this.d = 40;
 			this.left = parseInt(Math.random()*bigbox.clientWidth - this.d);
 			this.top = parseInt(Math.random()*bigbox.clientHeight - this.d);
-			this.x = parseInt(Math.random() * 10);
-			this.y  = parseInt(Math.random() * 10);
+			this.x = parseInt(Math.random() * 11);
+			this.y  = parseInt(Math.random() * 11);
+			this.move();
+			this.ball();
 			
 		}
 		BallMove.prototype.ball = function () {
 			
-			this.dom=document.createElement("div");
-			this.dom.className = "smallball";
-			document.body.appendChild(this.dom);
 			this.dom.style.left=this.left+"px";
 			this.dom.style.top=this.top+"px";
-			 console.log(this.dom.style.top)
 		} 
 		BallMove.prototype.move = function  () {
 			var self = this
@@ -46,22 +44,24 @@
 			self.left += self.x;
 			self.top += self.y;
 			
-			if (self.top >= self.dom.clientHeight - self.d || self.top <= 0) {
-				self.y = -self.y; 
+			if (self.top >= bigbox.clientHeight - self.d || self.top <= 0) {
+                    self.y = -self.y;
+                }
+			console.log(self.left);
+			if (self.left >= bigbox.clientWidth - self.d || self.left <= 0) {
+				self.x = -self.x; 
 			}
-//			console.log(stepx);
-			if (self.left >= self.dom.clientWidth - self.d || self.left <= 0) {
-				self.y = -self.y; 
-			}
-		},1000)
+			
+			self.ball();
+		},100)
 			
 		
 		}
 		
 		
-		new BallMove();
-		new BallMove();
-		new BallMove();
+		setInterval(function  () {
+			new BallMove();
+		},1000)
 		
 	</script>
 </html>
