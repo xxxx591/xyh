@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<p></p>
+		<p></p>
+	</body>
+	<script>
+		var sec = document.getElementsByTagName("p")
+		
+		var Email = prompt("请输入你的邮箱");
+		var mobil = prompt("请输入你的手机")
+		var reg2 = /.com$|.cn$|.net$/
+		var reg = /@{1}/;
+		var reg1 = /^1/;
+		if(reg.test(Email) == true&&reg2.test(Email) == true){
+			sec[0].innerHTML = "邮箱:" + Email;
+		}else{
+			alert("你连邮箱格式都不知道吗？")
+		}
+		if (mobil.toString().length == 11&&reg1.test(mobil) == true) {
+			sec[1].innerHTML = "电话:" + mobil
+		} else{
+			alert("你连电话格式都不知道吗？")
+		}
+		
+	</script>
+</html>
