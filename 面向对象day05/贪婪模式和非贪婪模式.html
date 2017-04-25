@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script>
+		var  reg = /a+/;
+		var str = "aaadd11aav";
+		console.log(reg.exec(str));    //aaa
+		
+		var reg1 = /a+?/
+		console.log(reg1.exec(str))   //a
+		//有问号的时候就是非贪婪模式，取到第一个就停止。
+		//没有问号的时候就是贪婪模式，会取到多少的元素。
+		
+	</script>
+</html>

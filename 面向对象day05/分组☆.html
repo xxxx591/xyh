@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script>
+		var reg = /aa(dj)as(kd)od(js)\2/;
+		document.write(reg.test("aadjaskdodjskd"));   //true
+		//() 表示将几个项目组合成一个单元
+		//\n 表示匹配到的第几个单元
+		var reg = /ab(cd)ef(hi)\2/;
+         console.log(reg.test("abcdefhihif"));// true
+		
+		var result = "abcdefigh".replace(/a(bc)de(fi)gh/,function (match,$1,$2) {
+			return "ab" + $1 +'------' + $1 +"----" + $2;
+		})
+		console.log(result);
+		
+		var reg = /aa(mobile)cc(email)name\1zhuozi\2/
+      console.log(reg.test("aamobileccemailnamemobilezhuoziemail")); //true
+      
+//    这样就能理解了,\1就表示的是一个mobile \2就是表示email
+	</script>
+</html>

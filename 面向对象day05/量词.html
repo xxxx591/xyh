@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	
+	<script>
+//		
+//		/?/  表示出现零次或者一次
+//		/+/  表示出现一次或多次 至少一次
+//		{n}  表示出现n次;
+//		{n,m}  表示出现n到m次;
+//		{n,}   表示出现n次以上
+		
+		var reg = /\s?/  
+		console.log(reg.test("dhshs"))  //true;
+		var reg1 = /\s+/
+		console.log(reg.test("dhshs"))  //false;
+		
+		var reg = /\s{2}/   //表示出现n次  连续出现2个空格
+		
+		console.log(reg.test("fshdl vasksaj 1d  "))
+		
+		var reg = /\s{3,4}/
+		
+		console.log(reg.test("aadd  das    1"));
+		
+	</script>
+</html>

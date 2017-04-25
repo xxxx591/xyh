@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script>
+		
+		var str = "谢沅航正在看头文字D";
+		
+		console.log(str.replace(/头文字D/,'新闻联播'))
+		//replace 第一个参数是匹配字符串，第二个参数是需要修改的内容， 内容可以是字符串，也可以是函数。
+		console.log(str.replace(/头文字D/,function  () {
+			return "人民的名义"
+		}))
+		 var str1 = "lele你在干嘛呢"
+		 console.log(str1.replace(/干嘛呢/,"想我吗？"));
+		 console.log(str1.replace(/干嘛呢/,function  () {
+		 	return "我怀抱里"
+		 }))
+	</script>
+</html>

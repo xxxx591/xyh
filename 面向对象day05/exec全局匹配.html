@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script>
+		var str = "fsdhfljasdhfleofjahslkdjfhaworcldhfi"
+		var reg = /f/g;
+//		console.log(reg.exec(str));
+//		console.log(reg.exec(str));
+//		console.log(reg.exec(str));
+		var reg1 = new RegExp('f','g');
+		console.log(reg1.exec(str));
+		console.log(reg1.lastIndex);
+		console.log(reg1.exec(str));
+		console.log(reg1.lastIndex);
+		console.log(reg1.exec(str));
+		console.log(reg1.lastIndex);
+		console.log(reg1.exec(str));
+		console.log(reg1.lastIndex);
+		//它是一个正则方法；
+		//正则表达式我们有两种表达方式；
+		//字面量方式 var rag = /abc/g;
+		//实例化方式 var reg = New RegExp('abc','g');
+		
+		//使用exec表达方式为 reg.exec(str);
+		//不管exec是否具有全局修饰符g 结果都返回为数组形式；
+		// lastIndex 每次调用后这个都会变化
+		
+//		var str2 = "hi	stark";
+//		var reg2 = /\t/;
+//		console.log(reg2.test(str2));
+	</script>
+</html>
