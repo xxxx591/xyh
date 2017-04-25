@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script>
+		var str ="a  b     c"
+		console.log(str.split(/\s+/));
+		//split 用来分割字符串为数组
+		//此时\s 表示空白字符   +表示出现一次或多次(至少要出现一次)
+		
+		
+		//当我们不能用一个完整的字符串表达这个切割符号的时候,
+		//但是我们能提炼一个规则来切割,
+		//此时我们就可以用正则表达式来表示这个规则,来切割字符串
+		
+		var str1 = "fhsaiuhfjzcnpwiohsfvjxasf"
+		console.log(str1.split(/f+/));
+	</script>
+</html>
