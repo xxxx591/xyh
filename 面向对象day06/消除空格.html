@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script>
+		
+		var str = "    yua  nh  ang xie "
+		var str1 = "asg1u3yo12yoiclj#1k@!$@!#312iyu44112"
+		String.prototype.trim = function  () {
+//			return this.replace(/\s+/g,"");        //去掉所有空格
+			return this.replace(/^\s+|\s$/g,"")    //去掉首尾空格
+		}
+		String.prototype.fundNum = function  () {
+			return this.replace(/[^0-9]/g,"")
+		}
+		
+		console.log(str.trim());
+		console.log(str1.fundNum());
+	</script>
+</html>

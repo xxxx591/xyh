@@ -15,7 +15,7 @@
 		var mobil = prompt("请输入你的手机")
 		var reg2 = /.com$|.cn$|.net$/
 		var reg = /@{1}/;
-		var reg1 = /^1/;
+		var reg1 = /^1[3578]\d{9}$/;
 		if(reg.test(Email) == true&&reg2.test(Email) == true){
 			sec[0].innerHTML = "邮箱:" + Email;
 		}else{
