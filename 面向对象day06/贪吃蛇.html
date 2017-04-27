@@ -50,9 +50,11 @@
 			{x:3,y:4},
 			{x:3,y:3}
 			];
-			
+			this.chAtcode();
 			this.generate();
-		}	
+			this.direction = "right";
+			
+		}
 			Snake.prototype.generate = function  () {
 				for (var i = 0; i<maxTable; i++) {
 					for(var j = 0; j<maxTable; j++){
@@ -64,8 +66,100 @@
 					tds[this.bodyArr[i].x][this.bodyArr[i].y].className="red"
 				}
 			}
-		
-		var Snake = new Snake();
-		
+			
+			Snake.prototype.move1 = function  () {
+				this.bodyArr.pop();
+				switch (this.direction){
+						case "right":
+					this.bodyArr.unshift({
+						x : this.bodyArr[0].x,
+						y : this.bodyArr[0].y + 1
+						})
+					
+						break;
+						case "up":
+					this.bodyArr.unshift({
+						x : this.bodyArr[0].x - 1,
+						y : this.bodyArr[0].y 
+						})
+					
+						break;
+						case "down":
+					this.bodyArr.unshift({
+						x : this.bodyArr[0].x + 1,
+						y : this.bodyArr[0].y 
+						})
+					
+						break;
+						case "left":
+					this.bodyArr.unshift({
+						x : this.bodyArr[0].x,
+						y : this.bodyArr[0].y - 1
+						})
+					
+					default:
+						break;
+				}
+			}
+			
+			Snake.prototype.chAtcode = function  () {
+				var self = this ;
+				document.onkeydown = function  (event) {
+					event = event || window.event;
+					switch (event.keyCode) {
+	                case 37:
+	                    if (self.direction == "right") {
+	                        return;
+	                    }
+	                    self.direction = "left";
+	                  break;
+	                case 38:
+	                    if (self.direction == "down") {
+	                        return;
+	                    }
+	                    self.direction = "up";
+	                  break;
+	                case 39:
+	                    if (self.direction == "left") {
+	                        return;
+	                    }
+	                    self.direction = "right";
+	                  break;
+	                case 40:
+	                    if (self.direction == "up") {
+	                        return;
+	                    }
+	                    self.direction = "down";
+	                  break;
+	                default:
+	
+	            	}
+				}
+			}
+			function Food (foodx,foody) {
+				this.change();
+			}
+			
+			Food.prototype.change = function  () {
+				this.foodx = parseInt(Math.random() * maxTable);
+				this.foody = parseInt(Math.random() * maxTable);
+				
+				for (var i = 0; i<snake.bodyArr.length; i++) {
+					if (this.foodx == snake.bodyArr[i].x && this.foody == snake.bodyArr[i].y) {
+						this.change();
+					}
+				}
+			}
+			Food.prototype.render = function  () {
+				tds[this.foodx][this.foody].className = "red"
+			}
+		var snake = new Snake();
+		var food = new Food();
+		var timer = setInterval(function  () {
+			snake.generate();
+			snake.move1();
+			food.render();
+			
+		},500)
 	</script>
 </html>
