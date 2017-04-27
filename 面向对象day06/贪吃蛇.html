@@ -25,23 +25,37 @@
 		var maxTable = 20;
 		var table = document.getElementById("table");
 		var tds = [];
-		for (var i = 0; i < maxTable; i++) {
-			var tr = document.createElement("tr");
-			tr.className = "tr";
-			//声明一个空的数字用来保存td
+//		for (var i = 0; i < maxTable; i++) {
+//			var tr = document.createElement("tr");
+//			tr.className = "tr";
+//			//声明一个空的数字用来保存td
+//			var thisrowid = [];
+//			for (var j = 0 ;j < maxTable; j++) {
+//				var td = document.createElement("td");
+//				td.className = "td"
+//				tr.appendChild(td);
+//				//把TD追加到里面行的数组
+//				thisrowid.push(td)
+//			}
+//			//把行和列追加到一个新的数组中，然后把新的数组追加到table里面
+//			tds.push(thisrowid)
+//			table.appendChild(tr);
+//		}
+		
+		
+		for (var i = 0; i < maxTable ; i++) {
 			var thisrowid = [];
-			for (var j = 0 ;j < maxTable; j++) {
+			var tr = document.createElement("tr")
+			tr.className = "tr";
+			for (var j = 0; j < maxTable ; j++) {
 				var td = document.createElement("td");
-				td.className = "td"
+				td.className = "td";
 				tr.appendChild(td);
-				//把TD追加到里面行的数组
-				thisrowid.push(td)
+				thisrowid.push(td);
 			}
-			//把行和列追加到一个新的数组中，然后把新的数组追加到table里面
-			tds.push(thisrowid)
+			tds.push(thisrowid);
 			table.appendChild(tr);
 		}
-		
 		
 		function Snake () {
 			this.bodyArr = [
@@ -107,11 +121,11 @@
 				document.onkeydown = function  (event) {
 					event = event || window.event;
 					switch (event.keyCode) {
-	                case 37:
-	                    if (self.direction == "right") {
-	                        return;
-	                    }
-	                    self.direction = "left";
+	                case 37 :
+	                if (self.direction == "right") {
+	                	return
+	                }
+	                self.direction = "left"
 	                  break;
 	                case 38:
 	                    if (self.direction == "down") {
