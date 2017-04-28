@@ -151,16 +151,17 @@
 				}
 			}
 			function Food (foodx,foody) {
+				
 				this.change();
 			}
 			
 			Food.prototype.change = function  () {
 				this.foodx = parseInt(Math.random() * maxTable);
 				this.foody = parseInt(Math.random() * maxTable);
-				
 				for (var i = 0; i<snake.bodyArr.length; i++) {
 					if (this.foodx == snake.bodyArr[i].x && this.foody == snake.bodyArr[i].y) {
 						this.change();
+						alert("dddd")
 					}
 				}
 			}
