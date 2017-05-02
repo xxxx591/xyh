@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style>
+		*{margin: 0;padding: 0;list-style: none;}
+		div{
+			width: 400px;
+			height: 300px;
+			border: 1px solid black;
+			overflow: hidden;
+			position: relative;
+		}
+		ul{
+			position: absolute;
+			width: 2000px;
+			height: 300px;
+			
+		}
+		ul li{
+			
+			float: left;
+			width: 400px;
+			height: 300px;
+		}
+		.box1{
+			background: red;
+		}
+		.box2{
+			background: yellow;
+		}
+		.box3{
+			background: blue;
+		}
+		.box4{
+			background: green;
+		}
+	</style>
+	<body>
+		<div>
+			<ul>
+				<li class="box1"></li>
+				<li class="box2"></li>
+				<li class="box3"></li>
+				<li class="box4"></li>
+				<li class="box1"></li>
+			</ul>
+		</div>
+		<input type="button" value="开始移动"/>
+		<input type="button" value="停止移动"/>
+	</body>
+	<script type="text/javascript" src="jquery.js" ></script>
+	<script>
+		var num = 400
+		var num1 = 0;
+		
+			setInterval(function Move () {
+				
+			if (num1 >= 4) {
+				num1 = 0
+				$("ul").animate({left : "0px"},0)
+				$("ul").animate({left: "-="+num+"px"},2000)
+			} else{
+				num1++;
+				console.log(num1)
+				$("ul").animate({left: "-="+num+"px"},2000)
+			}
+			
+			},3000)
+		
+	</script>
+</html>
