@@ -12,6 +12,7 @@
 			border: 1px solid black;
 			overflow: hidden;
 			position: relative;
+			
 		}
 		ul{
 			position: absolute;
@@ -20,10 +21,13 @@
 			
 		}
 		ul li{
-			
+			display:none;
 			float: left;
 			width: 400px;
 			height: 300px;
+		}
+		ul li:nth-child(1){
+			display: block;
 		}
 		.box1{
 			background: red;
@@ -37,12 +41,7 @@
 		.box4{
 			background: green;
 		}
-		.block{
-			display: block;
-		}
-		.none{
-			display: none;
-		}
+		
 	</style>
 	<body>
 		<div>
@@ -62,30 +61,34 @@
 		var num = 400
 		var num1 = 0;
 		var i = 0 ;
-//		
-//			setInterval(function Move () {
-//				
-//			if (num1 >= 4) {
-//				num1 = 0
-//				$("ul").animate({left : "0px"},0)
-//				$("ul").animate({left: "-="+num+"px"},2000)
-//				num1++;
-//			} else{
-//				num1++;
-//				console.log(num1)
-//				$("ul").animate({left: "-="+num+"px"},2000)
-//			}
-//			
-//			},3000)
 		
-		setInterval ( function() {
-			$("li:eq("+i+")").fadeOut("fast")
-			i++;
-			if (i >=4) {
-				i = 0;
-				$("li").fadeIn("fast")
+			setInterval(function Move () {
+				
+			if (num1 >= 4) {
+				num1 = 0
+				$("ul").animate({left : "0px"},0)
+				$("ul").animate({left: "-="+num+"px"},2000)
+				num1++;
+			} else{
+				num1++;
+				console.log(num1)
+				$("ul").animate({left: "-="+num+"px"},2000)
 			}
-		},2000) 
+			
+			},3000)
+		
+//		setInterval ( function() {
+//			$("li:eq("+i+")").fadeOut(2000)
+//			i++;
+//			setTimeout(function(){
+//				$("li:eq("+i+")").fadeIn("solw")
+//			},2000)
+//			if (i >=4) {
+//				i = 0;
+////			$("li").fadeIn("solw")
+//			};
+//			console.log(i)
+//		},2000) 
 		
 	</script>
 </html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript" src="jquery.js" ></script>
+	<style type="text/css">
+		.nav{
+			width: 960px;height: 40px;margin: 100px;
+		}
+		*{
+			margin: 0;padding: 0; list-style: none;text-decoration: none;
+		}
+		.nav ul li {
+			width: 160px;
+			height: 40px;text-align: center;
+			line-height: 40px;
+			float: left;
+			background: #FFFF00;
+		}
+		.nav ul li a{
+			color: #3123df;
+		}
+		.dropbox ul li {
+			text-align: center;
+			background: #a33422;
+			
+		}
+		.dropbox{
+			display: none;
+		}
+	</style>
+	<body>
+		<div class="nav">
+			<ul>
+				<li><a href="">坦克</a>
+					<div class="dropbox">
+						<ul>
+							<li>程咬金</li>
+							<li>程咬金</li>
+							<li>程咬金</li>
+							<li>程咬金</li>
+						</ul>
+					</div>
+				</li>
+				<li><a href="">法师</a>
+					<div class="dropbox">
+						<ul>
+							<li>诸葛亮</li>
+							<li>诸葛亮</li>
+							<li>诸葛亮</li>
+							<li>诸葛亮</li>
+						</ul>
+					</div>
+				</li>
+				<li><a href="">射手</a>
+					<div class="dropbox">
+						<ul>
+							<li>后羿</li>
+							<li>后羿</li>
+							<li>后羿</li>
+							<li>后羿</li>
+						</ul>
+					</div>
+				</li>
+				<li><a href="">刺客</a>
+					<div class="dropbox">
+						<ul>
+							<li>韩跳跳</li>
+							<li>韩跳跳</li>
+							<li>韩跳跳</li>
+							<li>韩跳跳</li>
+						</ul>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</body>
+	<script>
+		$("li").mouseenter(function  () {
+			var self = $(this).find(".dropbox")
+			if(self.is(":animated")){
+				return;
+			}
+			self.slideDown("fast");
+		})
+		$("li").mouseleave(function  () {
+			var self = $(this).find(".dropbox")
+			self.slideUp("fast");
+		})
+//		$("li").hover(function () {
+//			if($(this).children("div").is(":animated")){
+//				return;
+//			}
+//			$(this).children("div").fadeToggle(500);
+//		})
+	</script>
+</html>
